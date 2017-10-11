@@ -1,0 +1,39 @@
+<div class="container">
+    <aside class="aside">
+      <a [routerLink]="['']" style="display: block">
+        <p class="logo">
+          平台管理后台
+        </p>
+      </a>
+      <div class="menu">
+        <div class="menu-p" *ngFor="let nav of navList" [@shrinkOut]="nav.state" (click)="open(nav)">
+          <div class="menu-div">
+            <img src="{{nav.imgUrl}}" class="icons" *ngIf="!nav.isSelect">
+            <img src="{{nav.img_URL}}" class="icons" *ngIf="nav.isSelect">
+            <span [class.active]="nav.isSelect" class="" >{{nav.type}}</span>
+            <img class="arrow " src="../../../assets/image/arrow-up.png" *ngIf="nav.isSelect">
+            <img class="arrow " src="../../../assets/image/arrow-down.png" *ngIf="!nav.isSelect">
+          </div>
+          <ul class="child-menu" [hidden]="!nav.isSelect">
+            <li *ngFor="let child of nav.childList" [class.active]="child.isSelect" (click)="switchRouter(child,$event)" [routerLink]="child.link">{{child.name}}</li>
+          </ul>
+        </div>
+
+      </div>
+    </aside>
+    <main class="main">
+      <div class="top">
+        <span>终端测试</span>
+        <div class="fr menu-down" (click)="openTop()">
+          你好,Admin
+          <img class="arrow " src="../../../assets/image/arrow-up.png" *ngIf="isDown">
+          <img class="arrow " src="../../../assets/image/arrow-down.png" *ngIf="!isDown">
+        </div>
+      </div>
+      <div class="content-wrap">
+        <div class="content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </main>
+</div>
