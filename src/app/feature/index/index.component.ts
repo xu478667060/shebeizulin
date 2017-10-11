@@ -135,7 +135,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
       nav.state = 'in'
     }
 
-    console.log(nav.state)
   }
 
   openTop() {
