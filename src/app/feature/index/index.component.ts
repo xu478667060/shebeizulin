@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {CommonUtils} from "../../utils/common.utils";
 
@@ -111,10 +111,11 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
   }
 
+  /**菜单栏打开方法**/
   open(nav: any) {
 
     for (let i = 0; i < this.navList.length; i++) {
-      //console.log(nav.type == this.navList[i].type);
+
       if (nav.type == this.navList[i].type) {
         continue;
       }
