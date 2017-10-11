@@ -67,20 +67,24 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
     if(this.checkChildUrl(arrDevice)){
 
-      this.navSelectIndex = 0
+      this.navSelectIndex = 0;
       return
     }
     if(this.checkChildUrl(arrOrder)){
-      this.navSelectIndex = 1
+      this.navSelectIndex = 1;
+      return
     }
     if(this.checkChildUrl(arrUser)){
-      this.navSelectIndex = 2
+      this.navSelectIndex = 2;
+      return
     }
     if(this.checkChildUrl(arrWarn)){
-      this.navSelectIndex = 3
+      this.navSelectIndex = 3;
+      return
     }
     if(this.checkChildUrl(arrOperate)){
-      this.navSelectIndex = 4
+      this.navSelectIndex = 4;
+      return
     }
 
   }
@@ -184,7 +188,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
       }, 200);
       this.navList[i].state = 'out'
     }
-
 
     if (nav.isSelect) {
       setTimeout(() => {
