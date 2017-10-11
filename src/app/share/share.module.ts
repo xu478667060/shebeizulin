@@ -3,6 +3,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {CommonModule} from "@angular/common";
 import {NgZorroAntdModule} from "ng-zorro-antd";
+import {DownSelectComponent} from "../component/down-select/down-select.component";
 
 
 
@@ -19,9 +20,10 @@ import {NgZorroAntdModule} from "ng-zorro-antd";
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    CommonModule
+    CommonModule,
+    DownSelectComponent
   ],
-  declarations: [],
+  declarations: [DownSelectComponent],
   providers: [],
 })
 export class ShareModule {

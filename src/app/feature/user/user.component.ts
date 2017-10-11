@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
+  selectList1:Array<string> = ["所有状态"]
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }
