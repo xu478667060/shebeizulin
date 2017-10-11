@@ -8,9 +8,11 @@
       <div class="menu">
         <div class="menu-p" *ngFor="let nav of navList" [@shrinkOut]="nav.state" (click)="open(nav)">
           <div class="menu-div">
+            <!--图标-->
             <img src="{{nav.imgUrl}}" class="icons" *ngIf="!nav.isSelect">
             <img src="{{nav.img_URL}}" class="icons" *ngIf="nav.isSelect">
             <span [class.active]="nav.isSelect" class="" >{{nav.type}}</span>
+            <!--菜单小图标-->
             <img class="arrow " src="../../../assets/image/arrow-up.png" *ngIf="nav.isSelect">
             <img class="arrow " src="../../../assets/image/arrow-down.png" *ngIf="!nav.isSelect">
           </div>
