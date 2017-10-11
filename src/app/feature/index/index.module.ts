@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {IndexComponent} from './index.component';
 import {ShareModule} from "../../share/share.module";
 import {IndexRoutingModule} from "./index.router";
+import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import {IndexRoutingModule} from "./index.router";
   exports: [],
   declarations: [
     IndexComponent,
-
+    DeviceDetailComponent
   ],
   providers: [],
 })
