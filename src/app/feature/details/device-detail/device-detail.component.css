@@ -1,0 +1,13 @@
+.details{
+  width: 100%;
+  min-height: 750px;
+}
+.details-top{
+  width: 100%;
+  height: 160px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.details-info{
+  width: 100%;
+  padding: 0 20px ;
+}

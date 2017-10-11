@@ -47,7 +47,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
   }
 
   checkChildUrl(arr){
-
     for (let i=0;i<arr.length;i++){
       if(this.checkUrl(arr[i])){
         return true
@@ -62,8 +61,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
     let arrUser = ["/merchant","/user","/maintainer"];
     let arrWarn = ["/map","/realtime","/history"];
     let arrOperate = ["/statistics",'/fapiao','/tuihuo','/expense'];
-
-
 
     if(this.checkChildUrl(arrDevice)){
 
@@ -158,9 +155,9 @@ export class IndexComponent implements OnInit, AfterViewInit {
   // main宽度适应
   rightChange() {
     let main = this.el.nativeElement.getElementsByClassName("main")[0]
-    let width = document.body.clientWidth || document.documentElement.clientWidth
+   // let width = document.body.clientWidth || document.documentElement.clientWidth
     let height = document.body.clientHeight || document.documentElement.clientHeight
-    main.style.width = width - 240 + "px"
+   // main.style.width = width - 240 + "px"
     main.style.height = height - 70 + "px"
   }
 
