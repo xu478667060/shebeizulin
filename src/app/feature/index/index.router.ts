@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from "./index.component";
+import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
     {path: 'terminal', loadChildren: 'app/feature/terminal-list/terminal-list.module#TerminalListModule'},
     {path: 'version', loadChildren: 'app/feature/version-list/version-list.module#VersionListModule'},
     {path: 'device', loadChildren: 'app/feature/device-list/device-list.module#DeviceListModule'},
+      //设备详情页
+      {path:'device/device-detail/:id' , component: DeviceDetailComponent},
+
     {path: 'gps', loadChildren: 'app/feature/gps-list/gps-list.module#GpsListModule'},
     /**订单管理**/
     {path: 'monitoring', loadChildren: 'app/feature/monitoring/monitoring.module#MonitoringModule'},
