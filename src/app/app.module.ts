@@ -4,6 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ShareModule} from "./share/share.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgZorroAntdModule} from "ng-zorro-antd";
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     ShareModule,
     AppRoutingModule,
-
+    NgZorroAntdModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
