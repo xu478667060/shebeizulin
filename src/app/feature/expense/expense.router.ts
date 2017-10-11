@@ -4,7 +4,7 @@ import {ExpenseComponent} from "./expense.component";
 
 
 const routes: Routes = [
-  {path: '', component: ExpenseComponent},
+  {path: '', component: ExpenseComponent },
 ];
 
 @NgModule({
