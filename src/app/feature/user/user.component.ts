@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -7,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  selectList1:Array<string> = ["所有状态"]
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
-
-
 }

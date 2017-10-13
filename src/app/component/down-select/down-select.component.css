@@ -1,10 +1,52 @@
+.down-select{
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+
+}
 
 .select-box{
-  padding:0 12px;
+  padding:5px 12px;
   border: 1px solid #e0e0e0;
   background: #fff;
   font-size: 14px;
   color:#444;
   border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 
+}
+
+
+.select-box img{
+  width: 12px;
+  height: 7px;
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+}
+
+.select-items{
+  position: absolute;
+  border:1px solid #e0e0e0;
+  border-top: none;
+  width: inherit;
+  cursor: pointer;
+  z-index: 200;
+  background: #fff;
+}
+.select-item{
+  height: 33px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+.select-item:hover{
+  background: #f6f6f6;
 }

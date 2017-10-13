@@ -1,3 +1,13 @@
-<p>
-  version-list works!
-</p>
+<div class="page-list">
+  <div class="content-wrap">
+    <div class="top-content">
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)" style="margin-left: 0"></search-box>
+    </div>
+    <div class="table-list">
+      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType"></table-list>
+    </div>
+    <div class="footer-div-page">
+      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+    </div>
+  </div>
+</div>

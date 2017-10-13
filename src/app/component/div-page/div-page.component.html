@@ -1,0 +1,8 @@
+<div class="div-page">
+  <span class="switch left-item" (click)="switchPage('pre')"><</span>
+  <span class="input-box left-item">
+      <input type="text" class="input" [(ngModel)]="pageNum" (keyup.enter)="checkInputPageNum()">
+  </span>
+  / <span class="pages">{{this.total}}</span>
+  <span class="switch right-item" (click)="switchPage('next')">></span>
+</div>
