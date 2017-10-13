@@ -15,6 +15,7 @@
     ></li>
     <!--操作类型-->
     <li class="td">
+      <!--终端列表-->
       <div class="operation" *ngIf="operationType==='terminal'">
         <ul>
           <li title="更新" class="update"></li>
@@ -22,7 +23,20 @@
           <li title="修改" class="edit"></li>
         </ul>
       </div>
+      <!--版本列表-->
       <div class="operation" *ngIf="operationType==='version'">
+
+      </div>
+      <!--设备列表-->
+      <div class="operation" *ngIf="operationType==='device'">
+
+      </div>
+      <!--监控订单-->
+      <div class="operation" *ngIf="operationType==='monitoring'">
+
+      </div>
+      <!--租赁订单-->
+      <div class="operation" *ngIf="operationType==='lease'">
 
       </div>
     </li>

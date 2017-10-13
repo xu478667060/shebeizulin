@@ -59,10 +59,16 @@
   padding-left: 12px;
   height: 50px;
   line-height: 50px;
+  vertical-align: top;
 
 }
 .tr-td .td:last-child{
   border-right: none;
+}
+
+.tr-td .td .img{
+  width:80px;
+  height: 80px;
 }
 
 .operation ul li{
