@@ -77,7 +77,7 @@
 .main{
   width: 100%;
   padding-left: 240px;
-
+  min-height: 1200px;
 }
 .top{
   width: 100%;
