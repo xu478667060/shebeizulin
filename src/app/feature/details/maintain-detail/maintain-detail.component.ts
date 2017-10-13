@@ -16,7 +16,7 @@ export class MaintainDetailComponent implements OnInit {
     isChange: true
   };
   selectList = [{
-    list: ["所有状态", "启用", "停用"],
+    list: [ "启用", "停用" , "禁止"],
     isSelect: false
   }
   ];
