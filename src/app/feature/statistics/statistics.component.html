@@ -1,3 +1,77 @@
-<p>
-  statistics works!
-</p>
+
+
+<div class="mcInfo">
+  <div>
+    <h4 class="mcInfo-title">当日订单数量（单）</h4>
+    <p class="mcInfo-text">
+      <i class="mcInfo-icon"></i
+        ><span class="mcInfo-num">150</span>
+    </p>
+  </div>
+  <div>
+    <h4 class="mcInfo-title">当日销售额（元）</h4>
+    <p class="mcInfo-text">
+      <i class="mcInfo-icon"></i
+        ><span class="mcInfo-num">150</span>
+    </p>
+  </div>
+  <div>
+    <h4 class="mcInfo-title">累计租赁个数（个）</h4>
+    <p class="mcInfo-text">
+      <i class="mcInfo-icon"></i
+        ><span class="mcInfo-num">150</span>
+    </p>
+  </div>
+  <div>
+    <h4 class="mcInfo-title">累计维保个数（个）</h4>
+    <p class="mcInfo-text">
+      <i class="mcInfo-icon"></i
+        ><span class="mcInfo-num">150</span>
+    </p>
+  </div>
+</div>
+
+<div class="mcChart">
+  <div class="mcChart-item">
+    <div class="mcChart-info">
+      <h3 class="mcChart-title">总销售额（万元）</h3>
+      <p class="mcChart-date">
+        <nz-datepicker style="position: absolute;left: 0; top: 0;opacity: 0; width: 47px;cursor: pointer;" [(ngModel)]="_date" [nzPlaceHolder]="'Select date'"></nz-datepicker>
+        <span>2017</span
+          ><i></i>
+      </p>
+    </div>
+    <echart [chartType]="lineChart" class="mcChart-box"></echart>
+  </div>
+
+  <div class="mcChart-item">
+    <div class="mcChart-info">
+      <h3 class="mcChart-title">订单数量（单）</h3>
+      <p class="mcChart-date">
+        <span>2017</span
+          ><i></i>
+      </p>
+    </div>
+    <echart [chartType]="lineChart" class="mcChart-box"></echart>
+  </div>
+  <div class="mcChart-item">
+    <div class="mcChart-info">
+      <h3 class="mcChart-title">消费者数量（个）</h3>
+      <p class="mcChart-date">
+        <span>2017</span
+          ><i></i>
+      </p>
+    </div>
+    <echart [chartType]="barChart" class="mcChart-box"></echart>
+  </div>
+  <div class="mcChart-item">
+    <div class="mcChart-info">
+      <h3 class="mcChart-title">维修员数量（个）</h3>
+      <p class="mcChart-date">
+        <span>2017</span
+          ><i></i>
+      </p>
+    </div>
+    <echart [chartType]="barChart" class="mcChart-box"></echart>
+  </div>
+</div>
