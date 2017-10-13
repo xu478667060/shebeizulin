@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from "./index.component";
 import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
+import {MaintainDetailComponent} from "../details/maintain-detail/maintain-detail.component";
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
     {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
+      {path:'device/maintain-detail/:id' , component: MaintainDetailComponent},
     /**数据报警**/
     {path: 'map', loadChildren: 'app/feature/map/map.module#MapModule'},
     {path: 'realtime', loadChildren: 'app/feature/realtime/realtime.module#RealtimeModule'},
