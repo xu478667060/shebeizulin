@@ -57,7 +57,10 @@ img{
 .flex{
   display: flex;
 }
-
+/*
+  徐
+  详情页基本样式
+*/
 /*列的样式*/
 .info-msg ul li.row-4{
   width: 25%;
@@ -71,10 +74,17 @@ img{
 .info-msg ul li.row-1{
   width: 100%;
 }
+.info-msg ul li.row-other{
+  width: 18%;
+}
 /*详情公共样式*/
+.details{
+  width: 100%;
+}
 .details-info{
   width: 100%;
-  padding: 0 20px ;
+  padding: 0 20px 25px;
+  border-bottom: 1px solid #e0e0e0;
 }
 /**标题**/
 .info-title{
@@ -162,3 +172,7 @@ img{
 .callHim{
   margin-right: 16px;
 }
+.info-last{
+  border-bottom: none;
+}
+/**********分割线************/
