@@ -31,13 +31,21 @@ img{
   height: 100%;
   overflow: hidden;
 }
+
+/**
+  * Author : 李文超
+  * Email : 1159849884@qq.com
+  * Time : 2017/10/13 14:04
+  * Description :
+  **/
 .page-list{
-  height: 100%;
+  height: inherit;
+  position: relative;
 }
+
 .content-wrap{
   padding:20px 20px;
   height: inherit;
-  position: relative;
 }
 
 .top-content down-select:not(:first-child),
@@ -50,7 +58,8 @@ img{
 }
 
 .footer-div-page{
-  bottom:20px;
-  right: 20px;
-  position: absolute;
+  text-align: right;
+  margin-top: 20px;
+
 }
+/*李文超 结束*/

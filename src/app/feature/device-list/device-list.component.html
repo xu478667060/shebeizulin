@@ -1,4 +1,23 @@
-<p>
-  device-list works! <br>
-  <button [routerLink]="['/device/device-detail',1]">点击</button>
-</p>
+
+<div class="page-list">
+  <div class="content-wrap">
+    <div class="top-content">
+      <down-select [selectList]="selectList[0].list" [isSelect]="selectList[0].isSelect"
+                   (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+      ></down-select>
+      <down-select [selectList]="selectList[1].list" [isSelect]="selectList[1].isSelect"
+                   (cancelOpen)="changeOpen(1,$event)" (open)="changeOpen(1,$event)" (selectItem)="selectItem(1,$event)"
+      ></down-select>
+      <down-select [selectList]="selectList[2].list" [isSelect]="selectList[2].isSelect"
+                   (cancelOpen)="changeOpen(2,$event)" (open)="changeOpen(2,$event)" (selectItem)="selectItem(2,$event)"
+      ></down-select>
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+    </div>
+    <div class="table-list">
+      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType"></table-list>
+    </div>
+    <div class="footer-div-page">
+      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+    </div>
+  </div>
+</div>

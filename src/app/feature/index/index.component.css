@@ -102,13 +102,11 @@
 }
 .content{
   width: 100%;
-  min-height: 95%;
-  height: 95%;
+  min-height: 750px;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
 }
-
 
 .menu-down{
   font-size: 16px;
