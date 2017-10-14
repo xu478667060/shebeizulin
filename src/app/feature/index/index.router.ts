@@ -28,7 +28,7 @@ const routes: Routes = [
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
       //商家申请
-      {path:'device/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
+      {path:'user/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
     {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
       //维修员信息
       {path:'device/maintain-detail/:id' , component: MaintainDetailComponent},
