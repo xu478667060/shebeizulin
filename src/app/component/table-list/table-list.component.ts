@@ -15,6 +15,9 @@ export class TableListComponent implements OnInit {
 
   @Input() operationType:string
 
+  // 是否有操作一列 默认为true
+  @Input() hasOperation:boolean = true
+
   constructor() {
   }
 
