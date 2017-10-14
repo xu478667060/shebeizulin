@@ -1,11 +1,31 @@
-<div class="details">
-  <!--顶部步骤条-->
-    <div class="details-top"></div>
-  <!--其余信息-->
+<div class="content">
+  <div class="details">
+    <!--顶部步骤条-->
+    <div class="details-top">
+      <div class="multi-bar flex">
+          <span class="bar-icon" >
+            <img src="../../../../assets/image/finish.png" *ngIf="waitAccept">
+            <img src="../../../../assets/image/no-finish.png" *ngIf="!waitAccept" >
+          </span>
+          <!--线条-->
+          <span class="bar-line" *ngIf="!waitAccept"></span>
+          <span class="bar-line-finish" *ngIf="waitAccept"></span>
+
+      </div>
+      <div class="multi-bar flex bar-txt">
+        <p class="bar-p flex">
+          待接收 <br>
+          <span class="bar-time">
+            2017/07/07 16:05:22
+          </span>
+        </p>
+      </div>
+    </div>
+    <!--其余信息-->
     <div class="details-info">
       <p class="info-title flex">
-         <span></span>
-          订单详情
+        <span></span>
+        订单详情
       </p>
       <div class="info-msg">
         <ul class="flex">
@@ -45,7 +65,7 @@
     <div class="details-info">
       <p class="info-title flex">
         <span></span>
-         设备信息
+        设备信息
       </p>
       <div class="info-msg">
         <ul class="flex">
@@ -74,8 +94,8 @@
     </div>
     <div class="details-info info-last">
       <p class="info-title flex">
-         <span></span>
-          维修员信息
+        <span></span>
+        维修员信息
       </p>
       <div class="info-msg">
         <ul class="flex">
@@ -102,4 +122,5 @@
         </p>
       </div>
     </div>
+  </div>
 </div>

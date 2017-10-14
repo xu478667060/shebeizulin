@@ -1,11 +1,15 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {UserComponent} from "./user.component";
+import {UserDetailComponent} from "../details/user-detail/user-detail.component";
 
 
 
 const routes: Routes = [
   {path: '', component: UserComponent},
+  //用户信息
+  {path: 'user-detail/:id', component : UserDetailComponent},
+
 ];
 
 @NgModule({

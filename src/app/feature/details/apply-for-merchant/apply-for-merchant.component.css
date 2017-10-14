@@ -25,20 +25,3 @@
 .merchant-approve{
   padding-left: 36px;
 }
-
-/**申请按钮**/
-.accept{
-  background-color: #00b64f;
-  margin-right: 16px;
-}
-.accept:hover{
-  background-color: #00a347;
-  box-shadow: 0 2px 8px rgba(0,182,79,.4);
-}
-.reject{
-  background-color: #ff4d35;
-}
-.reject:hover{
-  background-color: #f5371d;
-  box-shadow: 0 2px 8px rgba(255,77,53,.4);
-}

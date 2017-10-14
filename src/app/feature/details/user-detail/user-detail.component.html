@@ -1,0 +1,57 @@
+<div class="content">
+    <div class="details">
+      <div class="maintain-detail-content">
+        <div class="infoSetting flex">
+          <div class="info-basic flex">
+            <img src="../../../../assets/image/weixiu-head.png">
+            <ul class="maintain-infos">
+              <li class="maintain-infos-titles">
+                基本信息
+              </li>
+              <li>
+                <span>用户姓名</span>
+                徐先生
+              </li>
+              <li>
+                <span>身份证号码</span>
+              </li>
+              <li>
+                <span>手机号码</span>
+              </li>
+              <li>
+                <span>认证信息</span>
+                审核通过
+              </li>
+              <li class="infos-select">
+                <span>账号状态</span>
+                <down-select [selectList]="selectList[0].list" [isSelect]="selectList[0].isSelect"
+                             (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+                             style="line-height: 1.5"
+                ></down-select>
+              </li>
+            </ul>
+          </div>
+          <div class="info-identity">
+            <p class="maintain-infos-titles">身份证信息</p>
+            <div class="papers">
+              <img src="../../../../assets/image/front.png">
+              <span>
+                <img src="../../../../assets/image/shade.png" class="shade">
+              </span>
+            </div>
+            <div class="papers">
+              <img src="../../../../assets/image/verso.png">
+              <span>
+                <img src="../../../../assets/image/shade.png" class="shade">
+              </span>
+            </div>
+          </div>
+
+        </div>
+        <p class="btns">
+          <button class="accept">接受申请</button>
+          <button class="reject">驳回申请</button>
+        </p>
+      </div>
+    </div>
+</div>
