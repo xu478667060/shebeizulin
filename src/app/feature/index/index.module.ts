@@ -5,6 +5,7 @@ import {IndexRoutingModule} from "./index.router";
 import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
 import {MaintainDetailComponent} from "../details/maintain-detail/maintain-detail.component";
 import {ApplyForMaintainerComponent} from "../details/apply-for-maintainer/apply-for-maintainer.component";
+import {ApplyForMerchantComponent} from "../details/apply-for-merchant/apply-for-merchant.component";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {ApplyForMaintainerComponent} from "../details/apply-for-maintainer/apply
     IndexComponent,
     DeviceDetailComponent,
     MaintainDetailComponent,
-    ApplyForMaintainerComponent
+    ApplyForMaintainerComponent,
+    ApplyForMerchantComponent
   ],
   providers: [],
 })
