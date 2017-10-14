@@ -1,7 +1,7 @@
 <div class="page-list">
   <div class="content-wrap">
     <div class="top-content">
-      <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)" style="margin-left: 0"></search-box>
     </div>
     <div class="table-list">
       <table-list [th]="th" [dataList]="dataList" [hasOperation]="hasOperation"></table-list>

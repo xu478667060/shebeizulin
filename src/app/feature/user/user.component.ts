@@ -89,6 +89,13 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeOpen(type, bool) {
+    this.selectList.forEach(item => {
+      item.isSelect = false
+    })
+    this.selectList[type].isSelect = bool
+  }
+
   // TODO:点击查询 筛选列表
   // 选择筛选条件
   selectItem(type, item) {
