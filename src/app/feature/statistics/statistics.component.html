@@ -1,6 +1,7 @@
 
 
 <div class="mcInfo">
+
   <div>
     <h4 class="mcInfo-title">当日订单数量（单）</h4>
     <p class="mcInfo-text">
@@ -32,6 +33,21 @@
 </div>
 
 <div class="mcChart">
+  <div class="mcChart-item">
+    <mc-chart [chart] = "lineChart1"></mc-chart>
+  </div>
+  <div class="mcChart-item">
+    <mc-chart [chart] = "lineChart2"></mc-chart>
+  </div>
+  <div class="mcChart-item">
+    <mc-chart [chart] = "barChart1"></mc-chart>
+  </div>
+  <div class="mcChart-item">
+    <mc-chart [chart] = "barChart2"></mc-chart>
+  </div>
+</div>
+
+<!-- <div class="mcChart">
   <div class="mcChart-item">
     <div class="mcChart-info">
       <h3 class="mcChart-title">总销售额（万元）</h3>
@@ -74,4 +90,4 @@
     </div>
     <echart [chartType]="barChart" class="mcChart-box"></echart>
   </div>
-</div>
+</div> -->

@@ -1,0 +1,145 @@
+<div class="details">
+  <div class="maintain-top flex">
+    <p class="maintain-change" [class.change]="maintainState.isChange" (click)="switch(maintainState)">
+      维修状况
+      <span *ngIf="maintainState.isChange"></span>
+    </p>
+    <p class="maintain-change" [class.change]="infoSet.isChange" (click)="switch(infoSet)">
+      信息设置
+      <span *ngIf="infoSet.isChange"></span>
+    </p>
+  </div>
+  <!--这个是主要东西-->
+  <div class="maintain-detail-content" *ngIf="maintainState.isChange">
+    <div class="details-info">
+      <p class="info-title flex maintains-title">
+        <span></span>
+        维修状况
+      </p>
+      <div class="info-msg">
+        <ul class="flex">
+          <li class="row-other">
+            当月维保量 :
+            <span class="info-span">1331</span>
+          </li>
+          <li class="row-other">
+            总维保量 :
+            <span class="info-span">12121</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="details-info">
+      <p class="info-title flex maintains-title">
+        <span></span>
+        评价状况
+      </p>
+      <div class="info-msg">
+        <ul class="flex">
+          <li class="row-4">
+            总评价量 :
+            <span class="info-span">1331</span>
+          </li>
+          <li class="row-4">
+            好评数量 :
+            <span class="info-span">12121</span>
+          </li>
+          <li class="row-4">
+            中评数量 :
+            <span class="info-span">1331</span>
+          </li>
+          <li class="row-4">
+            差评数量 :
+            <span class="info-span">12121</span>
+          </li>
+          <li class="row-4">
+            评价分数 :
+            <span class="info-span">12121</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="details-info info-last">
+      <p class="info-title flex maintains-title">
+        <span></span>
+        维修状况
+      </p>
+
+    </div>
+  </div>
+  <div class="maintain-detail-content" *ngIf="infoSet.isChange">
+    <div class="infoSetting flex">
+      <div class="info-basic flex">
+        <img src="../../../../assets/image/weixiu-head.png">
+        <ul class="maintain-infos">
+          <li class="maintain-infos-titles">
+            基本信息
+          </li>
+          <li>
+            <span>用户姓名</span>
+            徐先生
+          </li>
+          <li>
+            <span>身份证号码</span>
+          </li>
+          <li>
+            <span>维修员编号</span>
+          </li>
+          <li>
+            <span>手机号码</span>
+          </li>
+          <li>
+            <span>入驻事件</span>
+          </li>
+          <li>
+            <span>技术类型</span>
+          </li>
+          <li>
+            <span>维修类型</span>
+          </li>
+          <li class="infos-other">
+            <span>可服务品牌</span>
+            <i>
+              伊藤、伊藤、伊藤、伊藤、伊藤、伊藤、伊藤、
+              伊藤、伊藤、伊藤、伊藤、伊藤、伊藤、伊藤、
+            </i>
+          </li>
+          <li class="infos-select">
+            <span>账号状态</span>
+            <down-select [selectList]="selectList[0].list" [isSelect]="selectList[0].isSelect"
+                         (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+              style="line-height: 1.5"
+            ></down-select>
+          </li>
+          <li class="infos-other">
+            <span>个人介绍</span>
+            <i>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Accusamus accusantium distinctio illo minus
+            </i>
+          </li>
+        </ul>
+      </div>
+      <div class="info-identity">
+          <p class="maintain-infos-titles">身份证信息</p>
+          <div class="papers">
+            <img src="../../../../assets/image/front.png">
+            <span>
+              <img src="../../../../assets/image/shade.png" class="shade">
+            </span>
+          </div>
+          <div class="papers">
+              <img src="../../../../assets/image/verso.png">
+            <span>
+              <img src="../../../../assets/image/shade.png" class="shade">
+            </span>
+          </div>
+      </div>
+
+    </div>
+    <p class="btn-sure">
+      <button>确认</button>
+    </p>
+  </div>
+
+</div>

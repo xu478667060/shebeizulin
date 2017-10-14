@@ -1,0 +1,51 @@
+/*.mcChart {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mcChart-item {
+  flex: 1 1 calc(50% - 20px);
+  width: calc(50% - 20px);
+  min-height: 320px;
+  margin-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+.mcChart-item:nth-child(odd) {
+  margin-right: 40px;
+}*/
+
+.mcChart-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+.mcChart-title {
+  font-size: 16px;
+  color: #444;
+}
+.mcChart-date {
+  position: relative;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+.mcChart-date span {
+  margin-right: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.mcChart-date i {
+  display: inline-block;
+  width: 9px;
+  height: 6px;
+  background: url(../../../assets/image/icon-calendar-drop.png) no-repeat;
+  cursor: pointer;
+}
+.mcChart-box {
+  width: 100%;
+  height: 278px;
+  float: left;
+}

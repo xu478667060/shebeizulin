@@ -31,13 +31,21 @@ img{
   height: 100%;
   overflow: hidden;
 }
+
+/**
+  * Author : 李文超
+  * Email : 1159849884@qq.com
+  * Time : 2017/10/13 14:04
+  * Description :
+  **/
 .page-list{
-  height: 100%;
+  height: inherit;
+  position: relative;
 }
+
 .content-wrap{
   padding:20px 20px;
   height: inherit;
-  position: relative;
 }
 
 .top-content down-select:not(:first-child),
@@ -50,14 +58,18 @@ img{
 }
 
 .footer-div-page{
-  bottom:20px;
-  right: 20px;
-  position: absolute;
+  text-align: right;
+  margin-top: 20px;
+
 }
+/*李文超 结束*/
 .flex{
   display: flex;
 }
-
+/*
+  徐
+  详情页基本样式
+*/
 /*列的样式*/
 .info-msg ul li.row-4{
   width: 25%;
@@ -71,10 +83,17 @@ img{
 .info-msg ul li.row-1{
   width: 100%;
 }
+.info-msg ul li.row-other{
+  width: 18%;
+}
 /*详情公共样式*/
+.details{
+  width: 100%;
+}
 .details-info{
   width: 100%;
-  padding: 0 20px ;
+  padding: 0 20px 25px;
+  border-bottom: 1px solid #e0e0e0;
 }
 /**标题**/
 .info-title{
@@ -162,3 +181,7 @@ img{
 .callHim{
   margin-right: 16px;
 }
+.info-last{
+  border-bottom: none;
+}
+/**********分割线************/

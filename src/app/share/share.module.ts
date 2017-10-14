@@ -8,7 +8,7 @@ import {RouterModule} from "@angular/router";
 import {SearchBoxComponent} from "../component/search-box/search-box.component";
 import {TableListComponent} from "../component/table-list/table-list.component";
 import {DivPageComponent} from "../component/div-page/div-page.component";
-
+import {ChartComponent} from "../component/chart/chart.component";
 
 @NgModule({
   imports: [
@@ -27,13 +27,15 @@ import {DivPageComponent} from "../component/div-page/div-page.component";
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
-    DivPageComponent
+    DivPageComponent,
+    ChartComponent
   ],
   declarations: [
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
-    DivPageComponent
+    DivPageComponent,
+    ChartComponent
   ],
   providers: [],
 })
