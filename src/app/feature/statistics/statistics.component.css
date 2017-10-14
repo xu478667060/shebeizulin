@@ -2,6 +2,11 @@
  * 统计报表
  * ======================================================================== */
 
+ .content {
+   border: 0 !important;
+   background-color: #f7f7f7 !important;
+ }
+
 
 
 /* TOP

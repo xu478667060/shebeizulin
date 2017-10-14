@@ -9,7 +9,6 @@ import {NgZorroAntdModule} from "ng-zorro-antd";
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,

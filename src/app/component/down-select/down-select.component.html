@@ -1,0 +1,12 @@
+<div class="down-select">
+  <div class="select-box" (click)="openSelectBox($event)" >
+    <span>{{_selectItem}}</span>
+    <img src="../../../assets/image/arrow-up.png" alt="选择" *ngIf="isSelect">
+    <img src="../../../assets/image/arrow-down.png" alt="选择" *ngIf="!isSelect">
+  </div>
+  <ul *ngIf="isSelect" class="select-items">
+    <li class="select-item" *ngFor="let item of selectList" (click)="changeItem(item)">
+      {{item}}
+    </li>
+  </ul>
+</div>

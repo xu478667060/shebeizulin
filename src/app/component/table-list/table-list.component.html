@@ -1,0 +1,30 @@
+
+<div class="table-list">
+  <ul class="tr-th">
+    <li class="th" *ngFor="let item of th"
+        [class.small]="item.type==='small'"
+        [class.large]="item.type==='large'"
+        [class.big-large]="item.type==='big-large'"
+    >{{item.name}}</li>
+  </ul>
+  <ul class="tr-td" *ngFor="let dataItem of dataList">
+    <li class="td" *ngFor="let data of dataItem" [innerHtml]="data.name"
+        [class.small]="data.type==='small'"
+        [class.large]="data.type==='large'"
+        [class.big-large]="data.type==='big-large'"
+    ></li>
+    <!--操作类型-->
+    <li class="td">
+      <div class="operation" *ngIf="operationType==='terminal'">
+        <ul>
+          <li title="更新" class="update"></li>
+          <li title="重启" class="restart"></li>
+          <li title="修改" class="edit"></li>
+        </ul>
+      </div>
+      <div class="operation" *ngIf="operationType==='version'">
+
+      </div>
+    </li>
+  </ul>
+</div>
