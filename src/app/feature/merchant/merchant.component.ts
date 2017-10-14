@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-merchant',
@@ -106,7 +107,7 @@ export class MerchantComponent implements OnInit {
   ]
 
   operationType = "merchant"
-  constructor() {
+  constructor(private router:Router) {
   }
 
   ngOnInit() {
@@ -136,5 +137,9 @@ export class MerchantComponent implements OnInit {
     console.log(pageNum)
   }
 
+  //跳转详情页
+  toDetail(){
+    // this.router.navigate()
+  }
 
 }
