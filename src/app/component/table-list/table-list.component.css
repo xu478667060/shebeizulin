@@ -37,8 +37,19 @@
   width:22.22%;
 }
 
-.flex{
+.big-large-more{
+  min-width: 320px;
+  width: 33%;
+}
 
+.big-height{
+  height: 70px !important;
+}
+
+.html-c{
+  height: inherit;
+  line-height: inherit;
+  align-items: center;
 }
 
 .tr-td{
@@ -46,8 +57,7 @@
   font-size: 14px;
   color: #666;
   border: 1px solid #e0e0e0;
-  height: 50px;
-  line-height: 50px;
+
   box-sizing: content-box;
   border-top: none;
 
@@ -61,15 +71,13 @@
   line-height: 50px;
   vertical-align: top;
 
+
 }
 .tr-td .td:last-child{
   border-right: none;
 }
 
-.tr-td .td .img{
-  width:80px;
-  height: 80px;
-}
+
 
 .operation ul li{
   display: inline-block;

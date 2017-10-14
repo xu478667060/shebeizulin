@@ -5,16 +5,25 @@
         [class.small]="item.type==='small'"
         [class.large]="item.type==='large'"
         [class.big-large]="item.type==='big-large'"
+        [class.big-large-more]="item.type==='big-large-more'"
     >{{item.name}}</li>
   </ul>
   <ul class="tr-td" *ngFor="let dataItem of dataList">
-    <li class="td" *ngFor="let data of dataItem" [innerHtml]="data.name"
+    <li class="td" *ngFor="let data of dataItem"
         [class.small]="data.type==='small'"
         [class.large]="data.type==='large'"
         [class.big-large]="data.type==='big-large'"
-    ></li>
+        [class.big-large-more]="data.type==='big-large-more'"
+        [class.big-height]="data.heightType==='big-height'"
+    >
+      <div class="flex html-c" [innerHtml]="data.name" *ngIf="!data.showSwitchButton"></div>
+      <div class="flex html-c switchButton" *ngIf="data.showSwitchButton">
+        <nz-switch [ngModel]="true"></nz-switch>
+      </div>
+    </li>
+
     <!--操作类型-->
-    <li class="td">
+    <li class="td" *ngIf="hasOperation">
       <!--终端列表-->
       <div class="operation" *ngIf="operationType==='terminal'">
         <ul>
@@ -23,6 +32,7 @@
           <li title="修改" class="edit"></li>
         </ul>
       </div>
+      <!--操作-->
       <!--版本列表-->
       <div class="operation" *ngIf="operationType==='version'">
 

@@ -40,12 +40,15 @@
   cursor: pointer;
   z-index: 200;
   background: #fff;
+  border-radius: 2px;
 }
 .select-item{
-  height: 33px;
+  height: 42px;
   display: flex;
   align-items: center;
   padding-left: 12px;
+  font-size: 14px;
+  color:#444;
 }
 .select-item:hover{
   background: #f6f6f6;

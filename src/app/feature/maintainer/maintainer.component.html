@@ -1,4 +1,13 @@
-<p>
-  maintainer works!
-  <button [routerLink]="['/device/maintain-detail',1]">点击</button>
-</p>
+<div class="page-list">
+  <div class="content-wrap">
+    <div class="top-content">
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+    </div>
+    <div class="table-list">
+      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType"></table-list>
+    </div>
+    <div class="footer-div-page">
+      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+    </div>
+  </div>
+</div>
