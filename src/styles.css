@@ -51,9 +51,10 @@ img {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
+
 }
 
-.content-wrap {
+.page-list .content-wrap {
   padding: 20px 20px;
   height: inherit;
 }
@@ -73,9 +74,6 @@ img {
 
 }
 
-.tr-td .td .html-c{
-  position: relative;
-}
 
 .tr-td .td .html-c .img {
   width: 40px;
