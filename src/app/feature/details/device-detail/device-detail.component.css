@@ -3,6 +3,43 @@
   height: 160px;
   border-bottom: 1px solid #e0e0e0;
 }
+/**步骤条**/
+.multi-bar{
+  width: 73.39%;
+  margin:43px 13.30% 0;
+  height: 22px;
+}
+
+.bar-txt{
+  margin-top: 12px;
+  text-align: left;
+}
+.bar-icon{
+  width: 22px;
+  height: 22px;
+}
+.bar-line{
+  width: 16.73%;
+  height: 12px;
+  border-bottom: 2px solid #b3b3b3;
+  margin: 0 20px;
+}
+.bar-line-finish{
+  width: 16.73%;
+  height: 12px;
+  margin: 0 20px;
+  border-bottom: 2px solid #ffba35;
+}
+.bar-p{
+  font-size: 16px;
+  color: #ffba35;
+  margin-left: -12px;
+
+}
+.bar-time{
+  margin-top: 26px;
+  margin-left: -100px;
+}
 /**订单状态**/
 .state-finish{
   color: #ffba35;

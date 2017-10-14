@@ -2,9 +2,6 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from "./index.component";
 import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
-import {MaintainDetailComponent} from "../details/maintain-detail/maintain-detail.component";
-import {ApplyForMaintainerComponent} from "../details/apply-for-maintainer/apply-for-maintainer.component";
-import {ApplyForMerchantComponent} from "../details/apply-for-merchant/apply-for-merchant.component";
 
 // import {BusinessInformationComponent} from "../mc-second-page/business-information/business-information.component"
 
@@ -16,8 +13,7 @@ const routes: Routes = [
     {path: 'terminal', loadChildren: 'app/feature/terminal-list/terminal-list.module#TerminalListModule'},
     {path: 'version', loadChildren: 'app/feature/version-list/version-list.module#VersionListModule'},
     {path: 'device', loadChildren: 'app/feature/device-list/device-list.module#DeviceListModule'},
-      //设备详情页
-      {path:'device/device-detail/:id' , component: DeviceDetailComponent},
+
 
     {path: 'gps', loadChildren: 'app/feature/gps-list/gps-list.module#GpsListModule'},
     /**订单管理**/
@@ -32,13 +28,10 @@ const routes: Routes = [
 
 
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
-      //商家申请
-      {path:'device/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
+
       {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
-      //维修员信息
-      {path:'device/maintain-detail/:id' , component: MaintainDetailComponent},
-      //维修员申请
-      {path:'device/apply-for-maintainer/:id' , component: ApplyForMaintainerComponent},
+
+    {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
 
     /**数据报警**/
     {path: 'map', loadChildren: 'app/feature/map/map.module#MapModule'},

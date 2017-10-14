@@ -1,0 +1,27 @@
+.merchant-info {
+  font-size: 18px;
+  color: #444;
+  width: 100%;
+  margin: 40px 0 24px 36px;
+}
+.merchant-identity{
+  width: 200px;
+  height: 126px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 20px;
+}
+
+.merchant-identity span{
+  width: 200px;
+  height: 126px;
+  position: absolute;
+  top: 0;
+  border-radius: 4px;
+  left: 0;
+  background-color: rgba(0,0,0,.2);
+}
+.merchant-approve{
+  padding-left: 36px;
+}

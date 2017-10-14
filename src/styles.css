@@ -51,9 +51,10 @@ img {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
+
 }
 
-.content-wrap {
+.page-list .content-wrap {
   padding: 20px 20px;
   height: inherit;
 }
@@ -73,9 +74,6 @@ img {
 
 }
 
-.tr-td .td .html-c{
-  position: relative;
-}
 
 .tr-td .td .html-c .img {
   width: 40px;
@@ -140,6 +138,15 @@ img {
   width: 18%;
 }
 
+/*content*/
+.content{
+  width: 100%;
+  min-height: 90%;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
 /*详情公共样式*/
 .details {
   width: 100%;
@@ -183,7 +190,7 @@ img {
   height: 30px;
   font-size: 14px;
   line-height: 32px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .info-span {
@@ -199,7 +206,7 @@ img {
 .info-msg ul li.img img {
   width: 150px;
   height: 112px;
-  margin-left: 10px;
+  margin: 10px 10px 0;
   vertical-align: text-top;
 }
 
@@ -313,6 +320,10 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .papers span{
   background-color: rgba(0,0,0,.5);
@@ -322,6 +333,13 @@ img {
   top: 0;
   left:0;
 }
+
+.shade{
+  width: 174px;
+  height: 142px;
+  margin: 50px 94px;
+}
+
 .btns{
   margin: 40px 0;
   text-align: center;
@@ -335,4 +353,23 @@ img {
   outline: none;
   color: #fff;
 }
+
+/***一些特别的申请按钮***/
+/**申请按钮**/
+.accept{
+  background-color: #00b64f;
+  margin-right: 16px;
+}
+.accept:hover{
+  background-color: #00a347;
+  box-shadow: 0 2px 8px rgba(0,182,79,.4);
+}
+.reject{
+  background-color: #ff4d35;
+}
+.reject:hover{
+  background-color: #f5371d;
+  box-shadow: 0 2px 8px rgba(255,77,53,.4);
+}
+
 /**********分割线************/

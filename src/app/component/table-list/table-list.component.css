@@ -1,9 +1,9 @@
 
-.table-list{
+.table-list {
   width: 100%;
 }
 
-.tr-th{
+.tr-th {
   background: #f6f6f6;
   font-size: 14px;
   color: #444;
@@ -19,50 +19,54 @@
   padding-left: 12px;
   height: 50px;
 }
-.tr-th .th:last-child{
+
+.tr-th .th:last-child {
   border-right: none;
 }
 
-.small{
+.small {
   min-width: 104px;
   width: 9.28%;
 }
-.large{
+
+.large {
   min-width: 166px;
   width: 14.82%;
 }
 
-.big-large{
-  min-width:250px;
-  width:22.22%;
+.big-large {
+  min-width: 250px;
+  width: 22.22%;
 }
 
-.big-large-more{
+.big-large-more {
   min-width: 320px;
   width: 33%;
 }
 
-.big-height{
+.big-height {
   height: 70px !important;
 }
 
-.html-c{
-  height: inherit;
+.html-c {
+  height: 100%;
   line-height: inherit;
   align-items: center;
+  width: 100%;
 }
 
-.tr-td{
+.tr-td {
   background: #fff;
   font-size: 14px;
   color: #666;
   border: 1px solid #e0e0e0;
   white-space: normal;
-  word-wrap:break-word;
+  word-wrap: break-word;
   box-sizing: content-box;
   border-top: none;
 
 }
+
 .tr-td .td {
   display: inline-flex;
   align-items: center;
@@ -72,13 +76,20 @@
   line-height: 50px;
   vertical-align: top;
 }
-.tr-td .td:last-child{
+
+.tr-td .td:last-child {
   border-right: none;
 }
 
+.tr-td .td
 
 
-.operation ul li{
+.operation {
+  display: flex;
+  align-items: center;
+}
+
+.operation ul li {
   display: inline-block;
   height: 18px;
   width: 18px;
@@ -86,26 +97,47 @@
   vertical-align: middle;
   margin-left: 8px;
 }
-.operation ul li:first-child{
+
+.operation ul li:first-child {
   margin-left: 0;
 }
 
-.operation .update{
+.operation .update {
   background: url(../../../assets/image/update.png);
 }
-.operation .update:hover{
+
+.operation .update:hover {
   background: url(../../../assets/image/update-change.png);
 }
 
-.operation .restart{
+.operation .restart {
   background: url(../../../assets/image/restart.png);
 }
-.operation .restart:hover{
+
+.operation .restart:hover {
   background: url(../../../assets/image/restart-change.png);
 }
-.operation .edit{
+
+.operation .edit {
   background: url(../../../assets/image/edit.png);
 }
-.operation .edit:hover{
+
+.operation .edit:hover {
   background: url(../../../assets/image/edit-change.png);
+}
+
+.operation.btns {
+  width: 100px;
+  height: 30px;
+  margin: 0 !important;
+}
+
+.operation .detail {
+  background: #f7ab12;
+  height: 30px;
+  line-height:30px;
+}
+
+.operation .detail:hover{
+  background: #e39b12;
 }
