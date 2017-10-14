@@ -3,6 +3,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from "./index.component";
 import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
 import {MaintainDetailComponent} from "../details/maintain-detail/maintain-detail.component";
+import {ApplyForMaintainerComponent} from "../details/apply-for-maintainer/apply-for-maintainer.component";
+import {ApplyForMerchantComponent} from "../details/apply-for-merchant/apply-for-merchant.component";
 
 
 const routes: Routes = [
@@ -21,12 +23,17 @@ const routes: Routes = [
     {path: 'monitoring', loadChildren: 'app/feature/monitoring/monitoring.module#MonitoringModule'},
     {path: 'trade', loadChildren: 'app/feature/trade/trade.module#TradeModule'},
     {path: 'lease', loadChildren: 'app/feature/lease/lease.module#LeaseModule'},
-    {path: 'maintain', loadChildren: 'app/feature/maintain/maintain.module#MaintainModule'},
+    {path: 'weibao', loadChildren: 'app/feature/maintain/maintain.module#MaintainModule'},
     /**成员管理**/
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
+      //商家申请
+      {path:'device/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
     {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
+      //维修员信息
       {path:'device/maintain-detail/:id' , component: MaintainDetailComponent},
+      //维修员申请
+      {path:'device/apply-for-maintainer/:id' , component: ApplyForMaintainerComponent},
     /**数据报警**/
     {path: 'map', loadChildren: 'app/feature/map/map.module#MapModule'},
     {path: 'realtime', loadChildren: 'app/feature/realtime/realtime.module#RealtimeModule'},

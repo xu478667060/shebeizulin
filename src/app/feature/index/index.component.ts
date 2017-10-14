@@ -57,7 +57,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
   checkNavSelectIndex(){
     let arrDevice = ["/terminal","/version","/gps",'/device'];
-    let arrOrder = ['/monitoring','/lease','/trade','/maintain'];
+    let arrOrder = ['/monitoring','/lease','/trade','/weibao'];
     let arrUser = ["/merchant","/user","/maintainer"];
     let arrWarn = ["/map","/realtime","/history"];
     let arrOperate = ["/statistics",'/fapiao','/tuihuo','/expense'];
@@ -110,7 +110,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
           {name: '监控订单', isSelect: this.checkUrl("/monitoring"), link: '/monitoring', index: 1},
           {name: '租赁订单', isSelect: this.checkUrl("/lease"), link: '/lease', index: 1},
           {name: '交易订单', isSelect: this.checkUrl("/trade"), link: '/trade', index: 1},
-          {name: '维保订单', isSelect: this.checkUrl("/maintain"), link: '/maintain', index: 1},
+          {name: '维保订单', isSelect: this.checkUrl("/weibao"), link: '/weibao', index: 1},
         ]
       },
       {
