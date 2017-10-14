@@ -1,0 +1,232 @@
+.mcContainer {
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.mcTab {
+  display: flex;
+  padding-left: 36px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mcTab li {
+  height: 60px;
+  margin-right: 36px;
+  font-size: 16px;
+  line-height: 60px;
+  color: #999;
+  cursor: pointer;
+}
+.mcTab .mcTab-item__active {
+  border-bottom: 3px solid #ffba35;
+  color: #ffba35;
+}
+
+/* 第一个Tab开始
+ * ===============================
+   =============================== */
+
+.mcChart {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px 40px 36px;
+}
+.mcChart-item {
+  flex: 1 1 calc(50% - 20px);
+  width: calc(50% - 20px);
+  min-height: 320px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+.mcChart-item:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.mcAssess {
+  padding: 0 14px;
+}
+.mcAssess-container {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.mcAssess h3{
+  padding: 24px 0 14px;
+  font-size: 18px;
+  color: #444;
+}
+
+.mcAssess-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 26px;
+}
+.mcAssess-list li {
+  flex: 1 1 25%;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.mcAssess-list .mcAssess-item {
+  flex: none;
+}
+.mcAssess-list .mcAssess-item:nth-child(1) {
+  width: 25%;
+}
+.mcAssess-list .mcAssess-item:nth-child(2) {
+  width: 75%;
+}
+.mcAssess-list li .mcAssess-title {
+  color: #444;
+}
+.mcAssess-list li span {
+  color: #999;
+}
+.mcAssess-item1 {
+  display: flex;
+}
+.mcAssess-item1 img {
+  width: 12px;
+  height: 12px;
+}
+
+
+/* 第四个Tab开始
+ * ===============================
+   =============================== */
+.mcFour {
+  padding-top: 24px;
+  padding-left: 36px;
+}
+
+.mcFour h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.mcFour-content {
+  display: flex;
+}
+
+/* 如何合同、监控服务合同合同样式
+   =============================== */
+.mcFour-hetong {
+  position: relative;
+  width: 140px;
+  height: 170px;
+  margin-right: 28px;
+}
+.mcFour-hetong:hover .mcFour-hover{
+  display: block;
+}
+.mcFour-hetong:hover .mcFour-shade{
+  display: block;
+}
+.mcFour-hetong img {
+  width: 100%;
+  height: 100%;
+}
+.mcFour-shade {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 12px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.mcFour-hover {
+  display: none;
+  position: absolute;
+  top: 44px;
+  left: 14px;
+}
+.mcFour-hover p {
+  width: 100px;
+  text-align: center;
+}
+.mcFour-hover p:nth-child(1) {
+  margin-bottom: 10px;
+}
+.mcFour-hover p:nth-child(2) {
+  margin-bottom: 12px;
+}
+.mcFour-btn {
+  height: 32px;
+  border: 1px solid #ffba35;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffba35;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.mcFour-btn:hover {
+  background-color: #ffba35;
+  color: #444;
+}
+.mcFour-date {
+  font-size: 12px;
+  color: #ffba35;
+  line-height: 16px;
+}
+.mcFour-shuoming {
+  width: 140px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #999;
+  line-height: 20px;
+}
+
+/* 如何合同、监控服务合同 上传合同样式
+   =============================== */
+.mcFour-update {
+  position: relative;
+  width: 140px;
+  height: 170px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #444;
+  background: #f5f5f5;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.mcFour-update__hover {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mcFour-update__hover div{
+  margin: 0 auto;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 10px;
+  background: url(../../../../assets/image/icon-hetong.png) no-repeat center center;
+}
+
+.mcFour-update:hover {
+  background-color: #fff;
+}
+.mcFour-update:hover .mcFour-update__hover div{
+  background: url(../../../../assets/image/icon-hetong-hover.png) no-repeat center center;
+}
+
+/* Button
+   =============================== */
+.mcFour-save {
+  display: block;
+  width: 120px;
+  height: 32px;
+  margin: 64px auto 40px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ffba35;
+  border-radius: 16px;
+  outline: none;
+}
+.mcFour-save:hover {
+  background-color: #f7ab12;
+  box-shadow: 0 2px 8px rgba(255, 186, 53, .4)
+}

@@ -5,7 +5,7 @@ import {StatisticsComponent} from './statistics.component';
 import {ShareModule} from "../../share/share.module";
 import {StatisticsRoutingModule} from "./statistics.router";
 
-import { EChartOptionDirective1 } from '../../directive/echart/echart-option.directive';
+// import { EChartOptionDirective1 } from '../../directive/echart/echart-option.directive';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { EChartOptionDirective1 } from '../../directive/echart/echart-option.dir
     NgZorroAntdModule
   ],
   exports: [],
-  declarations: [StatisticsComponent, EChartOptionDirective1],
+  declarations: [StatisticsComponent],
   providers: [],
 })
 export class StatisticsModule {

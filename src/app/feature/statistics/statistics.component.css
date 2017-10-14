@@ -2,11 +2,6 @@
  * 统计报表
  * ======================================================================== */
 
- .content {
-   border: 0 !important;
-   background-color: #f7f7f7 !important;
- }
-
 
 
 /* TOP
@@ -80,7 +75,7 @@
   margin-right: 40px;
 }
 
-.mcChart-info {
+/*.mcChart-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,4 +107,4 @@
   width: 100%;
   height: 278px;
   float: left;
-}
+}*/

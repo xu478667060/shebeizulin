@@ -1,11 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { DatePicker } from 'ng-zorro-antd'
 
 @Component({
   selector: 'app-statistics',
   templateUrl: './statistics.component.html',
   styleUrls: ['./statistics.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class StatisticsComponent implements OnInit {
 

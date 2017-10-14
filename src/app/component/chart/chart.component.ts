@@ -106,6 +106,11 @@ export class ChartComponent implements OnInit {
       ]
     }
     myChart.setOption(lineChart);
+    window.addEventListener('resize', function () {
+      if (document.body.clientWidth > 1080) {
+        myChart.resize();
+      }
+    });
   }
 
   setBarChart () {
@@ -178,6 +183,11 @@ export class ChartComponent implements OnInit {
       ]
     }
     myChart.setOption(barChart);
+    window.addEventListener('resize', function () {
+      if (document.body.clientWidth > 1080) {
+        myChart.resize();
+      }
+    });
   }
 
   getChartData(data) {

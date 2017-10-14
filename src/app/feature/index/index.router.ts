@@ -6,6 +6,7 @@ import {MaintainDetailComponent} from "../details/maintain-detail/maintain-detai
 import {ApplyForMaintainerComponent} from "../details/apply-for-maintainer/apply-for-maintainer.component";
 import {ApplyForMerchantComponent} from "../details/apply-for-merchant/apply-for-merchant.component";
 
+// import {BusinessInformationComponent} from "../mc-second-page/business-information/business-information.component"
 
 const routes: Routes = [
   {
@@ -26,14 +27,19 @@ const routes: Routes = [
     {path: 'weibao', loadChildren: 'app/feature/maintain/maintain.module#MaintainModule'},
     /**成员管理**/
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
+      // 商家信息
+      // {path:'merchant/business-information' , loadChildren: 'app/feature/mc-second-page/business-information/business-information.module#BusinessInformationModule'},
+
+
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
       //商家申请
       {path:'device/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
-    {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
+      {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
       //维修员信息
       {path:'device/maintain-detail/:id' , component: MaintainDetailComponent},
       //维修员申请
       {path:'device/apply-for-maintainer/:id' , component: ApplyForMaintainerComponent},
+
     /**数据报警**/
     {path: 'map', loadChildren: 'app/feature/map/map.module#MapModule'},
     {path: 'realtime', loadChildren: 'app/feature/realtime/realtime.module#RealtimeModule'},
@@ -57,4 +63,3 @@ const routes: Routes = [
 })
 export class IndexRoutingModule {
 }
-
