@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-maintainer',
@@ -112,9 +113,9 @@ export class MaintainerComponent implements OnInit {
     ],
   ]
 
-  operationType = "mainainer"
+  operationType = "maintainer"
 
-  constructor() {
+  constructor(private router:Router) {
   }
 
   ngOnInit() {
@@ -128,6 +129,10 @@ export class MaintainerComponent implements OnInit {
   // TODO:分页查询
   switchPage(pageNum) {
     console.log(pageNum)
+  }
+
+  toDetail(){
+    this.router.navigate(["/maintainer/maintain-detail",1])
   }
 
 }

@@ -28,12 +28,12 @@ const routes: Routes = [
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
       //商家申请
-      {path:'device/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
+      {path:'maintainer/apply-for-merchant/:id' , component: ApplyForMerchantComponent},
     {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
       //维修员信息
-      {path:'device/maintain-detail/:id' , component: MaintainDetailComponent},
+      {path:'maintainer/maintain-detail/:id' , component: MaintainDetailComponent},
       //维修员申请
-      {path:'device/apply-for-maintainer/:id' , component: ApplyForMaintainerComponent},
+      {path:'maintainer/apply-for-maintainer/:id' , component: ApplyForMaintainerComponent},
     /**数据报警**/
     {path: 'map', loadChildren: 'app/feature/map/map.module#MapModule'},
     {path: 'realtime', loadChildren: 'app/feature/realtime/realtime.module#RealtimeModule'},

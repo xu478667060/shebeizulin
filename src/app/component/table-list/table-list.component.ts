@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -18,9 +18,15 @@ export class TableListComponent implements OnInit {
   // 是否有操作一列 默认为true
   @Input() hasOperation:boolean = true
 
+  @Output() lookDetail = new EventEmitter()
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  _lookDetail(){
+    this.lookDetail.emit()
   }
 }

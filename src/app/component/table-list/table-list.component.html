@@ -23,7 +23,7 @@
     </li>
 
     <!--操作类型-->
-    <li class="td" *ngIf="hasOperation">
+    <li class="td" *ngIf="hasOperation" [class.big-height]="dataItem[0].heightType==='big-height'">
       <!--终端列表-->
       <div class="operation" *ngIf="operationType==='terminal'">
         <ul>
@@ -56,6 +56,11 @@
       <!--维保订单-->
       <div class="operation" *ngIf="operationType==='maintain'">
 
+      </div>
+      <!--维保订单-->
+      <div class="operation html-c btns" *ngIf="operationType==='maintainer'">
+          <!-- 查看详情-->
+          <button class="detail" (click)="_lookDetail()">查看详情</button>
       </div>
     </li>
   </ul>
