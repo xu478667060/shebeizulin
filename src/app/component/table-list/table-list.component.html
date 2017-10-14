@@ -19,6 +19,7 @@
       <div class="flex html-c" [innerHtml]="data.name" *ngIf="!data.showSwitchButton"></div>
       <div class="flex html-c switchButton" *ngIf="data.showSwitchButton">
         <nz-switch [ngModel]="true"></nz-switch>
+
       </div>
     </li>
 
@@ -57,8 +58,11 @@
       <div class="operation" *ngIf="operationType==='maintain'">
 
       </div>
-      <!--维保订单-->
-      <div class="operation html-c btns" *ngIf="operationType==='maintainer'">
+      <!--维修员管理 商家管理-->
+      <div class="operation html-c btns"
+           *ngIf="operationType==='maintainer'||operationType==='merchant'||operationType==='user'"
+
+      >
           <!-- 查看详情-->
           <button class="detail" (click)="_lookDetail()">查看详情</button>
       </div>

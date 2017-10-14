@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -83,7 +84,8 @@ export class UserComponent implements OnInit {
 
   operationType = "user"
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private router:Router
+              ) {
   }
 
   ngOnInit() {
@@ -112,4 +114,8 @@ export class UserComponent implements OnInit {
     console.log(pageNum)
   }
 
+  //跳转详情页
+  toDetail(){
+    // this.router.navigate()
+  }
 }
