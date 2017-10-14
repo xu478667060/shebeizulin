@@ -1,32 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
   padding: 0;
   margin: 0;
-  text-decoration: none!important;
+  text-decoration: none !important;
   list-style: none;
   box-sizing: border-box;
 }
-html{
+
+html {
   font-family: "Microsoft YaHei";
 }
+
 /**公共样式**/
-.fl{
+.fl {
   float: left;
 }
-.fr{
+
+.fr {
   float: right;
 }
+
 /**左侧icon的样式**/
-.icons{
+.icons {
   display: inline-block;
   width: 20px;
   height: 20px;
 }
-a:hover,a:focus,a:active,a:visited{
+
+a:hover, a:focus, a:active, a:visited {
   text-decoration: none !important;
 }
 
-img{
+img {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -38,73 +43,124 @@ img{
   * Time : 2017/10/13 14:04
   * Description :
   **/
-.page-list{
+.page-list {
   height: inherit;
   position: relative;
+  width: 100%;
+  min-height: 90%;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
 }
 
-.content-wrap{
-  padding:20px 20px;
+.content-wrap {
+  padding: 20px 20px;
   height: inherit;
 }
 
 .top-content down-select:not(:first-child),
-.top-content search-box{
+.top-content search-box {
   margin-left: 16px;
 }
 
-.table-list{
+.table-list {
   margin-top: 20px;
 }
 
-.footer-div-page{
+.footer-div-page {
   text-align: right;
   margin-top: 20px;
 
 }
+
+.tr-td .td .html-c{
+  position: relative;
+}
+
+.tr-td .td .html-c .img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+.tr-td .td .html-c .space-wrap{
+  word-break : break-all;
+  overflow:hidden;
+  height: inherit;
+  width: inherit;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+}
+.tr-td .td .html-c .ant-switch-checked{
+  background: #ffba35;
+  outline: none;
+}
+
+.tr-td .td .html-c .ant-switch:focus:hover {
+  box-shadow: none;
+}
+
+.tr-td .td .big-img {
+  width: 50px;
+  height: 50px;
+}
+
+.tr-td .td .name {
+  margin-left: 20px;
+}
+
 /*李文超 结束*/
-.flex{
+.flex {
   display: flex;
 }
 /***************************分界线******************************/
+
 /*
   徐
   详情页基本样式
 */
 /*列的样式*/
-.info-msg ul li.row-4{
+.info-msg ul li.row-4 {
   width: 25%;
 }
-.info-msg ul li.row-3{
+
+.info-msg ul li.row-3 {
   width: 29%;
 }
-.info-msg ul li.row-2{
+
+.info-msg ul li.row-2 {
   width: 45%;
 }
-.info-msg ul li.row-1{
+
+.info-msg ul li.row-1 {
   width: 100%;
 }
-.info-msg ul li.row-other{
+
+.info-msg ul li.row-other {
   width: 18%;
 }
+
 /*详情公共样式*/
-.details{
+.details {
   width: 100%;
 }
-.details-info{
+
+.details-info {
   width: 100%;
   padding: 0 20px 25px;
   border-bottom: 1px solid #e0e0e0;
 }
+
 /**标题**/
-.info-title{
+.info-title {
   width: 100%;
-  margin: 24px 0 18px 0 ;
+  margin: 24px 0 18px 0;
   font-size: 18px;
   color: #444;
 }
+
 /**小圆圈**/
-.info-title span{
+.info-title span {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -112,58 +168,69 @@ img{
   overflow: hidden;
   margin: 10px 10px 0;
 }
-.info-msg{
+
+.info-msg {
   width: 100%;
   padding-left: 28px;
 }
-.info-msg ul{
+
+.info-msg ul {
   width: 100%;
   flex-wrap: wrap;
 }
-.info-msg ul li{
+
+.info-msg ul li {
   height: 30px;
   font-size: 14px;
   line-height: 32px;
   margin-bottom: 6px;
 }
-.info-span{
+
+.info-span {
   color: #999;
   margin-left: 10px;
   font-size: 14px;
 }
-.info-msg ul li.img{
+
+.info-msg ul li.img {
   height: 112px;
 }
 
-.info-msg ul li.img img{
+.info-msg ul li.img img {
   width: 150px;
   height: 112px;
   margin: 10px 10px 0;
   vertical-align: text-top;
 }
+
 /**箭头**/
-.arrows{
+.arrows {
   color: #ff4d35;
 }
+
 /**维修员头像**/
-.info-msg ul li.headImg{
+.info-msg ul li.headImg {
   height: 68px;
   line-height: 68px;
 }
-.headImg img{
+
+.headImg img {
   width: 68px;
   height: 68px;
   margin-right: 16px;
   vertical-align: middle;
 }
-.detail-service-fonts{
+
+.detail-service-fonts {
   color: #ffba35;
 }
+
 /**按钮**/
-.service-button{
+.service-button {
   margin-left: 88px;
 }
-.button{
+
+.button {
   width: 92px;
   height: 32px;
   border-radius: 16px;
@@ -175,16 +242,20 @@ img{
   font-size: 14px;
   color: #ffba35;
 }
-.button:hover{
+
+.button:hover {
   background-color: #ffba35;
   color: #fff;
 }
-.callHim{
+
+.callHim {
   margin-right: 16px;
 }
-.info-last{
+
+.info-last {
   border-bottom: none;
 }
+
 
 /**维修员信息**/
 .maintain-detail-content{
