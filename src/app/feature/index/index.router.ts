@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from "./index.component";
 import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
 
+// import {BusinessInformationComponent} from "../mc-second-page/business-information/business-information.component"
 
 const routes: Routes = [
   {
@@ -22,8 +23,16 @@ const routes: Routes = [
     {path: 'weibao', loadChildren: 'app/feature/maintain/maintain.module#MaintainModule'},
     /**成员管理**/
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
+      // 商家信息
+      // {path:'merchant/business-information' , loadChildren: 'app/feature/mc-second-page/business-information/business-information.module#BusinessInformationModule'},
+
+
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
+
+      {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
+
     {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
+
     /**数据报警**/
     {path: 'map', loadChildren: 'app/feature/map/map.module#MapModule'},
     {path: 'realtime', loadChildren: 'app/feature/realtime/realtime.module#RealtimeModule'},
@@ -47,4 +56,3 @@ const routes: Routes = [
 })
 export class IndexRoutingModule {
 }
-

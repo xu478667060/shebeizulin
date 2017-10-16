@@ -10,6 +10,7 @@ import {TableListComponent} from "../component/table-list/table-list.component";
 import {DivPageComponent} from "../component/div-page/div-page.component";
 import {StepsComponent} from "../component/steps/steps.component";
 
+import {ChartComponent} from "../component/chart/chart.component";
 
 @NgModule({
   imports: [
@@ -30,14 +31,17 @@ import {StepsComponent} from "../component/steps/steps.component";
     TableListComponent,
     DivPageComponent,
       StepsComponent,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    ChartComponent
   ],
   declarations: [
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
+    DivPageComponent,
+    ChartComponent,
       StepsComponent,
-    DivPageComponent
+
   ],
   providers: [],
 })

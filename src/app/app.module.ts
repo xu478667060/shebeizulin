@@ -6,7 +6,6 @@ import {ShareModule} from "./share/share.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgZorroAntdModule} from "ng-zorro-antd";
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,0 +1,9 @@
+<div class="mcChart-info">
+  <h3 class="mcChart-title">{{ chart.title }}</h3>
+  <p class="mcChart-date"
+    (click)="getChartData(chart)">
+    <span>{{ chart.date }}</span
+      ><i></i>
+  </p>
+</div>
+<div [id] = "chart.id" class="mcChart-box"> </div>
