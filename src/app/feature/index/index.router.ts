@@ -2,13 +2,16 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {IndexComponent} from "./index.component";
 import {DeviceDetailComponent} from "../details/device-detail/device-detail.component";
+import {TerraceComponent} from "../terrace/terrace.component";
 
 // import {BusinessInformationComponent} from "../mc-second-page/business-information/business-information.component"
 
 const routes: Routes = [
   {
     path: '', component: IndexComponent, children: [
-     {path:'' ,redirectTo:'/terminal' ,pathMatch:'full'},
+     {path:'' ,redirectTo:'terminal' ,pathMatch:'full'},
+    //平台信息
+      {path:'terrace/:id' ,component:TerraceComponent},
     /**设备管理**/
     {path: 'terminal', loadChildren: 'app/feature/terminal-list/terminal-list.module#TerminalListModule'},
     {path: 'version', loadChildren: 'app/feature/version-list/version-list.module#VersionListModule'},
@@ -24,8 +27,6 @@ const routes: Routes = [
     /**成员管理**/
     {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
       // 商家信息
-      // {path:'merchant/business-information' , loadChildren: 'app/feature/mc-second-page/business-information/business-information.module#BusinessInformationModule'},
-
 
     {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
 
