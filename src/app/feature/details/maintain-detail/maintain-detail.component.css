@@ -27,17 +27,9 @@
   background-color: #ffba35;
 }
 
-
 .infos-select{
  display: inline-block;
   margin-left: 21px;
-}
-
-
-.shade{
-  width: 174px;
-  height: 142px;
-  margin: 50px 94px;
 }
 
 .btn-sure button{

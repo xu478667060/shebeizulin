@@ -7,12 +7,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgZorroAntdModule} from "ng-zorro-antd";
 import { SwitchItemComponent } from './component/switch-item/switch-item.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-
-
   ],
   imports: [
     BrowserModule,

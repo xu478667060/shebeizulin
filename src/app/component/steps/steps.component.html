@@ -1,0 +1,45 @@
+<div class="steps flex">
+  <!--待接受-->
+  <span class="step-finish">
+          <img src="../../../assets/image/finish.png" class="step-icons" *ngIf="waitAccept">
+          <img src="../../../assets/image/no-finish.png" class="step-icons" *ngIf="!waitAccept">
+          <p class="step-txt step-state" [class.step-finish-txt]="waitAccept">待接受</p>
+          <p class="step-txt step-finish-txt step-time" *ngIf="waitAccept">2014/01/01 15:15:15</p>
+        </span>
+
+  <!--代签合同-->
+  <div class="step-line" [class.step-finish]="contract"></div>
+  <span class="step-finish">
+          <img src="../../../assets/image/finish.png" class="step-icons" *ngIf="contract">
+          <img src="../../../assets/image/no-finish.png" class="step-icons" *ngIf="!contract">
+          <p class="step-txt step-state" [class.step-finish-txt]="contract">待签合同</p>
+          <p class="step-txt step-finish-txt step-time" *ngIf="contract">2014/01/01 15:15:15</p>
+        </span>
+  <!--代发货-->
+  <div class="step-line" [class.step-finish]="deliverGoods"></div>
+  <span class="step-finish">
+          <img src="../../../assets/image/finish.png" class="step-icons" *ngIf="deliverGoods">
+          <img src="../../../assets/image/no-finish.png" class="step-icons" *ngIf="!deliverGoods">
+          <p class="step-txt step-state" [class.step-finish-txt]="deliverGoods">待发货</p>
+          <p class="step-txt step-finish-txt step-time" *ngIf="deliverGoods">2014/01/01 15:15:15</p>
+        </span>
+
+  <!--待收货-->
+  <div class="step-line" [class.step-finish]="takeGoods"></div>
+  <span class="step-finish">
+          <img src="../../../assets/image/finish.png" class="step-icons" *ngIf="takeGoods">
+          <img src="../../../assets/image/no-finish.png" class="step-icons" *ngIf="!takeGoods">
+          <p class="step-txt step-state" [class.step-finish-txt]="takeGoods">待收货</p>
+          <p class="step-txt step-finish-txt step-time" *ngIf="takeGoods">2014/01/01 15:15:15</p>
+        </span>
+
+  <!--已完成-->
+  <div class="step-line" [class.step-finish]="finish"></div>
+  <span class="step-finish">
+          <img src="../../../assets/image/finish.png" class="step-icons" *ngIf="finish">
+          <img src="../../../assets/image/no-finish.png" class="step-icons" *ngIf="!finish">
+          <p class="step-txt step-state" [class.step-finish-txt]="finish">已完成</p>
+          <p class="step-txt step-finish-txt step-time" *ngIf="finish">2014/01/01 15:15:15</p>
+        </span>
+
+</div>

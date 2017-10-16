@@ -1,0 +1,144 @@
+<div class="mcContainer">
+
+  <ul class = "mcTab">
+    <li [ngClass]="{'mcTab-item__active': current === 1}"
+      (click) = "changeTab(1)">经营总汇</li>
+    <li [ngClass]="{'mcTab-item__active': current === 2}"
+      (click) = "changeTab(2)">信息设置</li>
+    <li [ngClass]="{'mcTab-item__active': current === 3}"
+      (click) = "changeTab(3)">资质认证</li>
+    <li [ngClass]="{'mcTab-item__active': current === 4}"
+      (click) = "changeTab(4)">合同</li>
+  </ul>
+
+  <div>
+    <!-- 经营总汇
+    ================================================== -->
+    <div *ngIf = "current === 1" class = "mcOne">
+      <div class="mcChart">
+        <div class="mcChart-item">
+          <mc-chart [chart] = "lineChart1"></mc-chart>
+        </div>
+        <div class="mcChart-item">
+          <mc-chart [chart] = "lineChart2"></mc-chart>
+        </div>
+      </div>
+
+      <div class="mcAssess">
+        <div class="mcAssess-container">
+          <h3>
+            <span></span>
+            评价状况
+          </h3>
+          <ul class="mcAssess-list">
+            <li class="mcAssess-item mcAssess-item1">
+              <span class="mcAssess-title">商店等级：</span>
+              <div>
+                <img src="../../../../assets/image/icon-full-star.png" alt="">
+                <img src="../../../../assets/image/icon-full-star.png" alt="">
+                <img src="../../../../assets/image/icon-star.png" alt="">
+              </div>
+            </li>
+            <li class="mcAssess-item"><span class="mcAssess-title">当前分数：</span><span>98</span></li>
+            <li><span class="mcAssess-title">租赁总评：</span><span>120</span></li>
+            <li><span class="mcAssess-title">租赁好评：</span><span>118（99.99%）</span></li>
+            <li><span class="mcAssess-title">租赁中评：</span><span>2（0.01%）</span></li>
+            <li><span class="mcAssess-title">租赁差评：</span><span>2（0.01%）</span></li>
+            <li><span class="mcAssess-title">交易总评：</span><span>120</span></li>
+            <li><span class="mcAssess-title">交易好评：</span><span>118（99.99%）</span></li>
+            <li><span class="mcAssess-title">交易中评：</span><span>2（0.01%）</span></li>
+            <li><span class="mcAssess-title">交易差评：</span><span>2（0.01%）</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 信息设置
+    ================================================== -->
+    <div *ngIf = "current === 2">2</div>
+
+    <!-- 资质认证
+    ================================================== -->
+    <div *ngIf = "current === 3">3</div>
+
+    <!-- 合同
+    ================================================== -->
+    <div *ngIf = "current === 4" class = "mcFour">
+      <div class="mcFour-item" style="margin-bottom: 36px;">
+        <h3>入住合同</h3>
+        <div class="mcFour-content">
+          <div>
+            <div class="mcFour-hetong">
+              <img src="../../../../assets/image/hetong.png" alt="">
+
+              <div class="mcFour-shade"></div>
+              <div class="mcFour-hover">
+                <p class="mcFour-btn">修改合同</p>
+                <p class="mcFour-btn">删除合同</p>
+                <p class="mcFour-date">2017.10.13</p>
+                <p class="mcFour-date">15:15:00</p>
+              </div>
+            </div>
+
+            <p class="mcFour-shuoming">(注：商家入住合同，这是已签订的，榜上得到的合同，大概多少)</p>
+          </div>
+
+          <div class="mcFour-update">
+            <div class="mcFour-update__hover">
+              <div></div>
+              <p>上传合同</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mcFour-item">
+        <h3>监控服务合同</h3>
+
+        <div class="mcFour-content">
+          <div>
+            <div class="mcFour-hetong">
+              <img src="../../../../assets/image/hetong.png" alt="">
+
+              <!-- <div class="mcFour-shade"></div>
+              <div class="mcFour-hover">
+                <p class="mcFour-btn">修改合同</p>
+                <p class="mcFour-btn">删除合同</p>
+                <p class="mcFour-date">2017.10.13</p>
+                <p class="mcFour-date">15:15:00</p>
+              </div> -->
+            </div>
+
+            <p class="mcFour-shuoming">(注：4组饭店记者是你发的来看)</p>
+          </div>
+
+          <div>
+            <div class="mcFour-hetong">
+              <img src="../../../../assets/image/hetong.png" alt="">
+
+              <!-- <div class="mcFour-shade"></div>
+              <div class="mcFour-hover">
+                <p class="mcFour-btn">修改合同</p>
+                <p class="mcFour-btn">删除合同</p>
+                <p class="mcFour-date">2017.10.13</p>
+                <p class="mcFour-date">15:15:00</p>
+              </div> -->
+            </div>
+
+            <p class="mcFour-shuoming">(注：4组饭店记者是你发的来看)</p>
+          </div>
+
+          <div class="mcFour-update">
+            <div class="mcFour-update__hover">
+              <div></div>
+              <p>上传合同</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="mcFour-save">保存</button>
+    </div>
+  </div>
+
+</div>

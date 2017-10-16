@@ -9,7 +9,9 @@ import {SearchBoxComponent} from "../component/search-box/search-box.component";
 import {TableListComponent} from "../component/table-list/table-list.component";
 import {DivPageComponent} from "../component/div-page/div-page.component";
 import {SwitchItemComponent} from "../component/switch-item/switch-item.component";
+import {StepsComponent} from "../component/steps/steps.component";
 
+import {ChartComponent} from "../component/chart/chart.component";
 
 @NgModule({
   imports: [
@@ -31,6 +33,10 @@ import {SwitchItemComponent} from "../component/switch-item/switch-item.componen
     DivPageComponent,
     SwitchItemComponent,
 
+    DivPageComponent,
+      StepsComponent,
+    NgZorroAntdModule,
+    ChartComponent
   ],
   declarations: [
     DownSelectComponent,
@@ -38,6 +44,10 @@ import {SwitchItemComponent} from "../component/switch-item/switch-item.componen
     TableListComponent,
     DivPageComponent,
     SwitchItemComponent,
+
+    DivPageComponent,
+    ChartComponent,
+      StepsComponent,
 
   ],
   providers: [],

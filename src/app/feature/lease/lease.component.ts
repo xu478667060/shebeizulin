@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-lease',
@@ -11,7 +11,7 @@ export class LeaseComponent implements OnInit {
     list: ["所有订单状态", "启用", "停用"],
     isSelect: false
   }
-  ]
+  ];
   th: Array<any> = [
     {name: "订单编号", type: "small"},
     {name: "用户姓名", type: "small"},
@@ -34,7 +34,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -42,7 +42,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -50,7 +50,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -58,7 +58,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -66,7 +66,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -74,7 +74,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -82,7 +82,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -90,7 +90,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -98,7 +98,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -106,7 +106,7 @@ export class LeaseComponent implements OnInit {
       {name: "1000", type: "small"},
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
-    ],[
+    ], [
       {name: "1231313132", type: "small"},
       {name: "张三", type: "small"},
       {name: "杭州华彩店", type: "large"},
@@ -115,9 +115,12 @@ export class LeaseComponent implements OnInit {
       {name: "2017-05-02 14:45:45", type: "large"},
       {name: "租赁中", type: "small"},
     ],
-    ]
+  ]
 
-    constructor() { }
+  operationType = "lease"
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -141,7 +144,7 @@ export class LeaseComponent implements OnInit {
   }
 
   // TODO:分页查询
-  switchPage(pageNum){
+  switchPage(pageNum) {
     console.log(pageNum)
   }
 
