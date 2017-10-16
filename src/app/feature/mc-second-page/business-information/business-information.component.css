@@ -56,30 +56,29 @@
   font-size: 18px;
   color: #444;
 }
-
 .mcAssess-list {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 26px;
 }
 .mcAssess-list li {
+  display: flex;
   flex: 1 1 25%;
   margin: 10px 0;
   font-size: 14px;
 }
-.mcAssess-list .mcAssess-item {
-  flex: none;
-}
 .mcAssess-list .mcAssess-item:nth-child(1) {
+  flex: 1 1 25%;
   width: 25%;
 }
 .mcAssess-list .mcAssess-item:nth-child(2) {
+  flex: 1 1 75%;
   width: 75%;
 }
 .mcAssess-list li .mcAssess-title {
   color: #444;
 }
-.mcAssess-list li span {
+.mcAssess-list li h4 {
   color: #999;
 }
 .mcAssess-item1 {
@@ -90,6 +89,184 @@
   height: 12px;
 }
 
+/* 第二个Tab开始
+ * ===============================
+   =============================== */
+
+.mcTwo {
+  padding-top: 24px;
+  padding-left: 36px;
+}
+.mcTwo h3{
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.mcTwo-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.mcTwo-content li{
+  display: flex;
+  flex: 1 1 50%;
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1;
+}
+.mcTwo-content li:first-child {
+  margin-top: 0;
+}
+.mcTwo-content li:nth-child(2) {
+  margin-top: 0;
+}
+.mcTwo-content .mcTwo-noflex {
+  flex: 1 1 100%;
+}
+.mcTwo-content li h4{
+  width: 70px;
+  margin-right: 26px;
+  text-align: right;
+}
+.mcTwo-content li span{
+}
+
+.mcTwo-item {
+  margin-bottom: 20px;
+}
+.mcTwo-item2 {
+  margin-bottom: 198px;
+}
+.mcTwo-item2 h3{
+  margin-bottom: 14px;
+}
+.mcTwo-content2 li{
+  line-height: 2
+}
+.mcTwo-status div{
+
+}
+.mcSelect {
+  position: relative;
+}
+.mcSelect button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 192px;
+  padding: 0 11px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  outline: none;
+}
+.mcSelect button span {
+  display: inline-block;
+  width: 12px;
+  height: 7px;
+  background: url(../../../../assets/image/arrow-down.png) no-repeat;
+}
+.mcSelect button .mcSelect-btn__active {
+  background: url(../../../../assets/image/arrow-up.png) no-repeat;
+}
+.mcSelect ul {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+.mcSelect li {
+  height: 42px;
+  margin: 0;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 42px;
+  color: #444;
+  cursor: pointer;
+}
+.mcSelect li:hover {
+  background-color: #F6F6F6;
+}
+
+/* 第三个Tab开始
+ * ===============================
+   =============================== */
+.mcThree {
+  padding-top: 24px;
+  padding-left: 36px;
+}
+.mcThree h3{
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 9px;
+}
+.mcThree-item1 {
+  margin-bottom: 24px;
+}
+.mcThree-content1 {
+  display: flex;
+  margin-bottom: 24px;
+}
+.mcThree-content1 li {
+  display: flex;
+  flex: 1 1 50%;
+  align-items: center;
+  height: 30px;
+}
+.mcThree-content1 li h4 {
+  width: 70px;
+  margin-right: 26px;
+  text-align: right;
+}
+.mcThree-content1 li div {
+  width: 150px;
+  height: 30px;
+  padding-left: 12px;
+  line-height: 30px;
+  border: 1px solid #e0e0e0;
+}
+.mcThree-content {
+  display: flex;
+}
+.mcThree-content li {
+  position: relative;
+  width: 200px;
+  height: 126px;
+  margin-right: 20px;
+}
+.mcThree-content .mcMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mcThree-content .mcMask-shade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.mcThree-content .mcMask-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 80px;
+
+}
+.mcMask-update p {
+  color: #fff;
+  text-align: center;
+}
+.mcThree-item2 {
+  margin-bottom: 167px;
+}
 
 /* 第四个Tab开始
  * ===============================
@@ -104,7 +281,9 @@
   color: #444;
   margin-bottom: 24px;
 }
-
+.mcFour-item2 {
+  margin-bottom: 64px;
+}
 .mcFour-content {
   display: flex;
 }
@@ -204,7 +383,6 @@
   margin-bottom: 10px;
   background: url(../../../../assets/image/icon-hetong.png) no-repeat center center;
 }
-
 .mcFour-update:hover {
   background-color: #fff;
 }
@@ -213,12 +391,13 @@
 }
 
 /* Button
+ * ===============================
    =============================== */
-.mcFour-save {
+.mcBtn-save {
   display: block;
   width: 120px;
   height: 32px;
-  margin: 64px auto 40px;
+  margin: 0 auto 40px;
   border: none;
   font-size: 14px;
   color: #fff;
@@ -226,7 +405,7 @@
   border-radius: 16px;
   outline: none;
 }
-.mcFour-save:hover {
+.mcBtn-save:hover {
   background-color: #f7ab12;
   box-shadow: 0 2px 8px rgba(255, 186, 53, .4)
 }

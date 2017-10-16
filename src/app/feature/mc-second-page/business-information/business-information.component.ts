@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessInformationComponent implements OnInit {
   current: number = 1;
-
+  isSelect: boolean = false;
   lineChart1 = {
     type: 'line',
     id: 'chart1',
@@ -25,6 +25,9 @@ export class BusinessInformationComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+  changeSelect() {
+    this.isSelect = !this.isSelect
   }
   changeTab(index) {
     this.current = index

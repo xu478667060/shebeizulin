@@ -32,22 +32,22 @@
           </h3>
           <ul class="mcAssess-list">
             <li class="mcAssess-item mcAssess-item1">
-              <span class="mcAssess-title">商店等级：</span>
+              <h4 class="mcAssess-title">商店等级：</h4>
               <div>
                 <img src="../../../../assets/image/icon-full-star.png" alt="">
                 <img src="../../../../assets/image/icon-full-star.png" alt="">
                 <img src="../../../../assets/image/icon-star.png" alt="">
               </div>
             </li>
-            <li class="mcAssess-item"><span class="mcAssess-title">当前分数：</span><span>98</span></li>
-            <li><span class="mcAssess-title">租赁总评：</span><span>120</span></li>
-            <li><span class="mcAssess-title">租赁好评：</span><span>118（99.99%）</span></li>
-            <li><span class="mcAssess-title">租赁中评：</span><span>2（0.01%）</span></li>
-            <li><span class="mcAssess-title">租赁差评：</span><span>2（0.01%）</span></li>
-            <li><span class="mcAssess-title">交易总评：</span><span>120</span></li>
-            <li><span class="mcAssess-title">交易好评：</span><span>118（99.99%）</span></li>
-            <li><span class="mcAssess-title">交易中评：</span><span>2（0.01%）</span></li>
-            <li><span class="mcAssess-title">交易差评：</span><span>2（0.01%）</span></li>
+            <li class="mcAssess-item"><h4 class="mcAssess-title">当前分数：</h4><span>98</span></li>
+            <li><h4 class="mcAssess-title">租赁总评：</h4><span>120</span></li>
+            <li><h4 class="mcAssess-title">租赁好评：</h4><span>118（99.99%）</span></li>
+            <li><h4 class="mcAssess-title">租赁中评：</h4><span>2（0.01%）</span></li>
+            <li><h4 class="mcAssess-title">租赁差评：</h4><span>2（0.01%）</span></li>
+            <li><h4 class="mcAssess-title">交易总评：</h4><span>120</span></li>
+            <li><h4 class="mcAssess-title">交易好评：</h4><span>118（99.99%）</span></li>
+            <li><h4 class="mcAssess-title">交易中评：</h4><span>2（0.01%）</span></li>
+            <li><h4 class="mcAssess-title">交易差评：</h4><span>2（0.01%）</span></li>
           </ul>
         </div>
       </div>
@@ -55,11 +55,132 @@
 
     <!-- 信息设置
     ================================================== -->
-    <div *ngIf = "current === 2">2</div>
+    <div *ngIf = "current === 2" class = "mcTwo">
+      <div class="mcTwo-item">
+        <h3>基本信息</h3>
+        <ul class="mcTwo-content">
+          <li>
+            <h4>店铺名称</h4><span>杭州第一</span>
+          </li>
+          <li>
+            <h4>店铺编号</h4><span>21345679</span>
+          </li>
+          <li>
+            <h4>店主名称</h4><span>张三</span>
+          </li>
+          <li>
+            <h4>联系方式</h4><span>11111111111</span>
+          </li>
+          <li>
+            <h4>邮箱</h4><span>天堂@110.zn</span>
+          </li>
+          <li>
+            <h4>经纬度</h4><span>119, 119</span>
+          </li>
+          <li class="mcTwo-noflex">
+            <h4>详细地址</h4><span>浙江省杭州市西湖区三墩镇华彩国际</span>
+          </li>
+          <li class="mcTwo-noflex">
+            <h4>商家照片</h4>
+            <div >
+              <img src="" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mcTwo-item mcTwo-item2">
+        <h3>账号信息</h3>
+        <ul class="mcTwo-content mcTwo-content2">
+          <li>
+            <h4>入住时间</h4><span>杭州第一</span>
+          </li>
+          <li class="mcTwo-status">
+            <h4>账号状态</h4>
+            <div class="mcSelect">
+              <button (click) = "changeSelect()">启用
+                <span [ngClass] = "{ 'mcSelect-btn__active': isSelect === true}"></span>
+              </button>
+              <ul *ngIf = "isSelect">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <button class="mcBtn-save">确认</button>
+      </div>
+    </div>
 
     <!-- 资质认证
     ================================================== -->
-    <div *ngIf = "current === 3">3</div>
+    <div *ngIf = "current === 3" class = "mcThree">
+      <div class="mcThree-item mcThree-item1">
+        <h3>身份认证</h3>
+        <ul class = "mcThree-content1">
+          <li><h4>店主姓名</h4><div>张三</div></li>
+          <li><h4>身份证号码</h4><div>33032616991564511</div></li>
+        </ul>
+        <ul class = "mcThree-content">
+          <li>
+            <img src="../../../../assets/image/front.png" alt="">
+            <div class="mcMask">
+              <div class="mcMask-shade"></div>
+              <div class="mcMask-body">
+                <img src="../../../../assets/image/shade.png" alt="">
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../../../../assets/image/verso.png" alt="">
+            <div class="mcMask">
+              <div class="mcMask-shade"></div>
+              <div class="mcMask-body mcMask-update">
+                <!-- <img src="../../../../assets/image/shade.png" alt=""> -->
+                <p>点击上传图片</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../../../../assets/image/front.png" alt="">
+            <div class="mcMask">
+              <div class="mcMask-shade"></div>
+              <div class="mcMask-body">
+                <img src="../../../../assets/image/shade.png" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mcThree-item mcThree-item2">
+        <h3>资质认证</h3>
+        <ul class = "mcThree-content">
+          <li>
+            <img src="../../../../assets/image/front.png" alt="">
+            <div class="mcMask">
+              <div class="mcMask-shade"></div>
+              <div class="mcMask-body">
+                <img src="../../../../assets/image/shade.png" alt="">
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="../../../../assets/image/front.png" alt="">
+            <div class="mcMask">
+              <div class="mcMask-shade"></div>
+              <div class="mcMask-body">
+                <img src="../../../../assets/image/shade.png" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="mcBtn-save">保存</button>
+    </div>
 
     <!-- 合同
     ================================================== -->
@@ -92,7 +213,7 @@
         </div>
       </div>
 
-      <div class="mcFour-item">
+      <div class="mcFour-item mcFour-item2">
         <h3>监控服务合同</h3>
 
         <div class="mcFour-content">
@@ -137,7 +258,7 @@
         </div>
       </div>
 
-      <button class="mcFour-save">保存</button>
+      <button class="mcBtn-save">保存</button>
     </div>
   </div>
 
