@@ -6,7 +6,7 @@ import {BusinessInformationComponent} from "../mc-second-page/business-informati
 
 const routes: Routes = [
   {path: '', component: MerchantComponent},
-  {path:'business-information', component: BusinessInformationComponent},
+  {path:'business-information/:id', component: BusinessInformationComponent},
   //商家申请
   {path:'apply-for-merchant/:id' , component: ApplyForMerchantComponent},
 ];
