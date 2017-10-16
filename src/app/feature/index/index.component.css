@@ -87,6 +87,7 @@
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(64,65,67,.06);
   line-height: 70px;
+  position: relative;
 }
 
 .top span{
@@ -108,17 +109,43 @@
   border: 1px solid #e0e0e0;
   border-radius: 3px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 89d1d6fa5dda637066da114d50d08878dce2e766
 .menu-down{
   font-size: 16px;
   color: #444;
   margin-right: 24px;
 }
+
 .menu-down img{
   width: 12px;
   height: 7px;
   margin-left: 10px;
 }
+
+.down-select{
+  position: absolute;
+  border:1px solid #e0e0e0;
+  border-radius: 2px;
+  background: #ffffff;
+  z-index: 200;
+  width: 150px;
+  right:24px;
+  top:56px;
+  cursor: pointer;
+  font-size: 14px;
+  color:#444;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding-left: 12px;
+}
+.item:not(:first-child):hover{
+  background: #f6f6f6;
+}
+.item:first-child{
+  cursor: auto;
+}
+

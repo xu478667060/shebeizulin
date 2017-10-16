@@ -7,6 +7,13 @@
   position: relative;
   box-sizing: content-box;
   border-radius: 2px;
+  cursor: pointer;
+}
+
+.search-box:hover,
+.search-box:active
+{
+  border-color: #444;
 }
 
 .search-box input {
@@ -19,7 +26,8 @@
   padding-left: 8px;
 }
 
-.search-box input::placeholder{
+
+.search-box input::placeholder {
   color: #cccccc;
   font-size: 14px;
 }
@@ -30,9 +38,10 @@
   float: right;
   margin-right: 12px;
   cursor: pointer;
-  background-image:url(../../../assets/image/search.png) ;
+  background-image: url(../../../assets/image/search.png);
 }
-.search-box .search-img:hover{
-  background-image:url(../../../assets/image/search-change.png) ;
+
+.search-box .search-img:hover {
+  background-image: url(../../../assets/image/search-change.png);
 
 }
