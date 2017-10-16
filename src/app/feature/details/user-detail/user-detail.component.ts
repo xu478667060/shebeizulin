@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-user-detail',
@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailComponent implements OnInit {
 
-  constructor() { }
+  isApprove:boolean = false
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
   selectList = [{
-    list: [ "启用", "停用" , "禁止"],
+    list: ["启用", "停用", "禁止"],
     isSelect: false
   }
   ];

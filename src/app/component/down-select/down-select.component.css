@@ -49,6 +49,7 @@
   padding-left: 12px;
   font-size: 14px;
   color:#444;
+  margin-bottom: 0;
 }
 .select-item:hover{
   background: #f6f6f6;

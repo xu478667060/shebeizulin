@@ -1,1 +1,16 @@
-
+.approve{
+  line-height: 30px;
+}
+.approve img{
+  width: 14px;
+  height: 16px;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+.approve i{
+  font-style: normal;
+  color: #ff4d35;
+}
+.approve i.approve-yes{
+  color: #00b64f;
+}

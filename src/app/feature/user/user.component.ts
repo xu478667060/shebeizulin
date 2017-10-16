@@ -116,6 +116,6 @@ export class UserComponent implements OnInit {
 
   //跳转详情页
   toDetail(){
-    // this.router.navigate()
+     this.router.navigate(['user','user-detail',1])
   }
 }
