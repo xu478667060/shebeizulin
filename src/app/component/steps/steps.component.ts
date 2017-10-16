@@ -15,7 +15,6 @@ export class StepsComponent implements OnInit {
   @Input() finish : boolean =false;
 
 
-
   constructor() {
   }
 
