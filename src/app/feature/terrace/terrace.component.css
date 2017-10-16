@@ -1,0 +1,38 @@
+.terrace-span{
+  color: #444;
+  text-align: right;
+  width: 63px;
+}
+.terrace-menu ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+.terrace-input{
+  padding-left: 12px;
+  margin-left: 16px;
+  width: 21.42%;
+  height: 30px;
+}
+.contract{
+  font-size: 14px;
+  color: #444;
+  line-height: 34px;
+  margin: 0 0 24px 28px ;
+}
+.btn-upload{
+  background-color: #ffba35;
+  margin: 0 16px 0 24px;
+}
+.btn-upload:hover{
+  background-color: #f7ab12;
+  box-shadow: 0 2px 8px rgba(255,186,53,.4);
+}
+
+.upload-time{
+  color: #999;
+}
+.terrace-save{
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}

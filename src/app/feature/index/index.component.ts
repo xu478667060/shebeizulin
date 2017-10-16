@@ -23,7 +23,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
   navList: any = [
 
   ];
-
   constructor(private el: ElementRef,
               private router:Router
               ) {
@@ -199,6 +198,6 @@ export class IndexComponent implements OnInit, AfterViewInit {
   }
 
   openTop() {
-
+      this.isDown = !this.isDown;
   }
 }

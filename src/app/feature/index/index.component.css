@@ -121,6 +121,9 @@
   height: 7px;
   margin-left: 10px;
 }
+.menu-down:hover{
+  cursor: pointer;
+}
 
 .down-select{
   position: absolute;
@@ -141,6 +144,9 @@
   align-items: center;
   height: 42px;
   padding-left: 12px;
+}
+.item:focus{
+  outline: none !important;
 }
 .item:not(:first-child):hover{
   background: #f6f6f6;
