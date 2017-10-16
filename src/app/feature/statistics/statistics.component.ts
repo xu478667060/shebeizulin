@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatisticsComponent implements OnInit {
 
+  _date;
+
   constructor() { }
 
   // public barChart = {

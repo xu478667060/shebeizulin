@@ -8,6 +8,7 @@ import {RouterModule} from "@angular/router";
 import {SearchBoxComponent} from "../component/search-box/search-box.component";
 import {TableListComponent} from "../component/table-list/table-list.component";
 import {DivPageComponent} from "../component/div-page/div-page.component";
+import {StepsComponent} from "../component/steps/steps.component";
 
 
 @NgModule({
@@ -27,12 +28,15 @@ import {DivPageComponent} from "../component/div-page/div-page.component";
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
-    DivPageComponent
+    DivPageComponent,
+      StepsComponent,
+    NgZorroAntdModule
   ],
   declarations: [
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
+      StepsComponent,
     DivPageComponent
   ],
   providers: [],

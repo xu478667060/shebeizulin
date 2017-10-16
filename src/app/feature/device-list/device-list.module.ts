@@ -8,7 +8,8 @@ import {DeviceDetailComponent} from "../details/device-detail/device-detail.comp
 @NgModule({
   imports: [
     ShareModule,
-    DeviceListRoutingModule
+    DeviceListRoutingModule,
+
   ],
   exports: [],
   declarations: [DeviceListComponent , DeviceDetailComponent],
