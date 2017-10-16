@@ -45,7 +45,7 @@
 }
 
 .big-height {
-  height: 70px !important;
+  height: 72px !important;
 }
 
 .html-c {
@@ -80,8 +80,6 @@
 .tr-td .td:last-child {
   border-right: none;
 }
-
-.tr-td .td
 
 
 .operation {
@@ -125,19 +123,37 @@
 .operation .edit:hover {
   background: url(../../../assets/image/edit-change.png);
 }
+.operation .delete {
+  background: url(../../../assets/image/delete.png);
+}
+
+.operation .delete:hover {
+  background: url(../../../assets/image/delete-change.png);
+}
+.operation .download {
+  background: url(../../../assets/image/download.png);
+}
+
+.operation .download:hover {
+  background: url(../../../assets/image/download-change.png);
+}
 
 .operation.btns {
-  width: 100px;
-  height: 30px;
+  width: 72px;
+  height: 28px;
   margin: 0 !important;
 }
 
 .operation .detail {
-  background: #f7ab12;
-  height: 30px;
-  line-height:30px;
+  background: #f7ab35;
+  height: 28px;
+  font-size: 14px;
+  color:#fff;
+  line-height:28px;
+  padding: 0 3px !important;
 }
 
 .operation .detail:hover{
-  background: #e39b12;
+  background: #f7ab12;
+  box-shadow:0 2px 8px rgba(255,186,53,.4);
 }

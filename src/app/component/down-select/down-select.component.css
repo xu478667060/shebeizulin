@@ -2,7 +2,7 @@
   width: 150px;
   display: inline-block;
   vertical-align: top;
-
+  position: relative;
 }
 
 .select-box{
@@ -49,6 +49,7 @@
   padding-left: 12px;
   font-size: 14px;
   color:#444;
+  margin-bottom: 0;
 }
 .select-item:hover{
   background: #f6f6f6;

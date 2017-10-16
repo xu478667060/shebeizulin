@@ -11,7 +11,7 @@
       </p>
     </div>
     <!--这个是主要东西-->
-    <div class="maintain-detail-content" *ngIf="maintainState.isChange">
+    <div class="maintain-detail-content" [hidden]="!maintainState.isChange">
       <div class="details-info">
         <p class="info-title flex maintains-title">
           <span></span>
@@ -63,12 +63,28 @@
       <div class="details-info info-last">
         <p class="info-title flex maintains-title">
           <span></span>
-          维修状况
+          订单列表
         </p>
+        <!--<div class="page-list">-->
+          <div class="content-wrap" style="margin-left: 28px">
+            <div class="top-content">
+              <down-select [selectList]="selectList1[0].list" [isSelect]="selectList1[0].isSelect"
+                           (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+              ></down-select>
 
-      </div>
+              <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+            </div>
+            <div class="table-list">
+              <table-list [th]="th" [dataList]="dataList" [hasOperation]="hasOperation"></table-list>
+            </div>
+            <div class="footer-div-page">
+              <div-page (getCurrentPage)="switchPage($event)"></div-page>
+            </div>
+          </div>
+        </div>
+      <!--</div>-->
     </div>
-    <div class="maintain-detail-content" *ngIf="infoSet.isChange">
+    <div class="maintain-detail-content" [hidden]="!infoSet.isChange">
       <div class="infoSetting flex">
         <div class="info-basic flex">
           <img src="../../../../assets/image/weixiu-head.png">

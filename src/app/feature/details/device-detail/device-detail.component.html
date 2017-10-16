@@ -2,24 +2,7 @@
   <div class="details">
     <!--顶部步骤条-->
     <div class="details-top">
-      <div class="multi-bar flex">
-          <span class="bar-icon" >
-            <img src="../../../../assets/image/finish.png" *ngIf="waitAccept">
-            <img src="../../../../assets/image/no-finish.png" *ngIf="!waitAccept" >
-          </span>
-          <!--线条-->
-          <span class="bar-line" *ngIf="!waitAccept"></span>
-          <span class="bar-line-finish" *ngIf="waitAccept"></span>
-
-      </div>
-      <div class="multi-bar flex bar-txt">
-        <p class="bar-p flex">
-          待接收 <br>
-          <span class="bar-time">
-            2017/07/07 16:05:22
-          </span>
-        </p>
-      </div>
+      <steps></steps>
     </div>
     <!--其余信息-->
     <div class="details-info">

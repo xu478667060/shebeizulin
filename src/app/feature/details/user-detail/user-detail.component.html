@@ -18,9 +18,12 @@
               <li>
                 <span>手机号码</span>
               </li>
-              <li>
+              <li class="approve flex">
                 <span>认证信息</span>
-                审核通过
+                <img src="../../../../assets/image/approve.png" *ngIf="isApprove">
+                <img src="../../../../assets/image/no-approve.png" *ngIf="!isApprove">
+                <i *ngIf="isApprove" class="approve-yes">已认证</i>
+                <i *ngIf="!isApprove" >未审核</i>
               </li>
               <li class="infos-select">
                 <span>账号状态</span>
@@ -36,17 +39,16 @@
             <div class="papers">
               <img src="../../../../assets/image/front.png">
               <span>
-                <img src="../../../../assets/image/shade.png" class="shade">
+                <img src="../../../../assets/image/shade.png" class="shade" *ngIf="false">
               </span>
             </div>
             <div class="papers">
               <img src="../../../../assets/image/verso.png">
               <span>
-                <img src="../../../../assets/image/shade.png" class="shade">
+                <img src="../../../../assets/image/shade.png" class="shade" *ngIf="false">
               </span>
             </div>
           </div>
-
         </div>
         <p class="btns">
           <button class="accept">接受申请</button>

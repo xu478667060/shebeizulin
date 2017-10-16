@@ -139,7 +139,9 @@ export class MerchantComponent implements OnInit {
 
   //跳转详情页
   toDetail(){
-    this.router.navigate(["/merchant/business-information", 1])
+    this.router.navigate(["/merchant/business-information", 'mc'])
+     this.router.navigate(['merchant','apply-for-merchant',1])
+
   }
 
 }
