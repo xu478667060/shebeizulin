@@ -1,0 +1,41 @@
+<div class="switch-list">
+  <switch-item [items]="switchItems" (getItem)="switchItemsChange($event)"></switch-item>
+</div>
+<div class="page-list" [hidden]="state!=='left'">
+  <div class="content-wrap">
+    <div class="top-content">
+      <down-select [selectList]="selectList[0].list" [isSelect]="selectList[0].isSelect"
+                   (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+      ></down-select>
+      <down-select [selectList]="selectList[1].list" [isSelect]="selectList[1].isSelect"
+                   (cancelOpen)="changeOpen(1,$event)" (open)="changeOpen(1,$event)" (selectItem)="selectItem(1,$event)"
+      ></down-select>
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+    </div>
+    <div class="table-list">
+      <table-list [th]="th" [dataList]="dataList" [hasOperation]="hasOperation"></table-list>
+    </div>
+    <div class="footer-div-page" >
+      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+    </div>
+  </div>
+</div>
+<div class="page-list" [hidden]="state!=='right'">
+  <div class="content-wrap">
+    <div class="top-content">
+      <down-select [selectList]="selectList1[0].list" [isSelect]="selectList1[0].isSelect"
+                   (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+      ></down-select>
+      <down-select [selectList]="selectList1[1].list" [isSelect]="selectList1[1].isSelect"
+                   (cancelOpen)="changeOpen(1,$event)" (open)="changeOpen(1,$event)" (selectItem)="selectItem(1,$event)"
+      ></down-select>
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+    </div>
+    <div class="table-list">
+      <table-list [th]="th1" [dataList]="dataList1" [hasOperation]="hasOperation"></table-list>
+    </div>
+    <div class="footer-div-page">
+      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+    </div>
+  </div>
+</div>

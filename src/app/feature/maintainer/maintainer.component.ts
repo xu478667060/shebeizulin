@@ -8,6 +8,9 @@ import {Router} from "@angular/router";
 })
 export class MaintainerComponent implements OnInit {
 
+  state = "left"
+
+  switchItems = ["申请列表","维修员列表"]
 
   searchTip = "请输入维修员名称"
 
@@ -133,6 +136,11 @@ export class MaintainerComponent implements OnInit {
 
   toDetail(){
     this.router.navigate(["/maintainer/maintain-detail",1])
+  }
+
+  //TODO:切换左右列表
+  switchItemsChange(item){
+    console.log(item)
   }
 
 }

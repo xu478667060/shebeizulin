@@ -8,6 +8,7 @@ import {RouterModule} from "@angular/router";
 import {SearchBoxComponent} from "../component/search-box/search-box.component";
 import {TableListComponent} from "../component/table-list/table-list.component";
 import {DivPageComponent} from "../component/div-page/div-page.component";
+import {SwitchItemComponent} from "../component/switch-item/switch-item.component";
 
 
 @NgModule({
@@ -27,13 +28,17 @@ import {DivPageComponent} from "../component/div-page/div-page.component";
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
-    DivPageComponent
+    DivPageComponent,
+    SwitchItemComponent,
+
   ],
   declarations: [
     DownSelectComponent,
     SearchBoxComponent,
     TableListComponent,
-    DivPageComponent
+    DivPageComponent,
+    SwitchItemComponent,
+
   ],
   providers: [],
 })

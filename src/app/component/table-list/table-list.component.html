@@ -36,7 +36,10 @@
       <!--操作-->
       <!--版本列表-->
       <div class="operation" *ngIf="operationType==='version'">
-
+        <ul>
+          <li title="下载" class="download"></li>
+          <li title="删除" class="delete"></li>
+        </ul>
       </div>
       <!--设备列表-->
       <div class="operation" *ngIf="operationType==='device'">
@@ -58,10 +61,11 @@
       <div class="operation" *ngIf="operationType==='maintain'">
 
       </div>
-      <!--维修员管理 商家管理-->
+      <!--维修员管理 商家管理 成员管理-->
       <div class="operation html-c btns"
-           *ngIf="operationType==='maintainer'||operationType==='merchant'||operationType==='user'"
-
+           *ngIf="operationType==='maintainer'||
+           operationType==='merchant'||
+           operationType==='user'"
       >
           <!-- 查看详情-->
           <button class="detail" (click)="_lookDetail()">查看详情</button>
