@@ -1,5 +1,8 @@
-
-<div class="page-list">
+<!-- <button [routerLink] = "['/merchant/business-information']">tiao</button> -->
+<div class="switch-list">
+  <switch-item [items]="switchItems" (getItem)="switchItemsChange($event)"></switch-item>
+</div>
+<div class="page-list" [hidden]="state!=='left'">
   <div class="content-wrap">
     <div class="top-content">
       <search-box [placeholder]="searchTip" (searchWord)="search($event)" style="margin-left: 0"></search-box>
