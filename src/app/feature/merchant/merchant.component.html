@@ -1,15 +1,30 @@
 <!-- <button [routerLink] = "['/merchant/business-information']">tiao</button> -->
-
-<div class="page-list">
+<div class="switch-list">
+  <switch-item [items]="switchItems" (getItem)="switchItemsChange($event)"></switch-item>
+</div>
+<div class="page-list" [hidden]="state!=='left'">
   <div class="content-wrap">
     <div class="top-content">
-      <down-select [selectList]="selectList[0].list" [isSelect]="selectList[0].isSelect"
-                   (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
-      ></down-select>
-      <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
+      <search-box [placeholder]="searchTip" (searchWord)="search($event)" style="margin-left: 0"></search-box>
     </div>
     <div class="table-list">
       <table-list [th]="th" [dataList]="dataList" [operationType]="operationType" (lookDetail)="toDetail()"></table-list>
+    </div>
+    <div class="footer-div-page">
+      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+    </div>
+  </div>
+</div>
+<div class="page-list" [hidden]="state!=='right'">
+  <div class="content-wrap">
+    <div class="top-content">
+      <down-select [selectList]="selectList1[0].list" [isSelect]="selectList1[0].isSelect"
+                   (cancelOpen)="changeOpen(0,$event)" (open)="changeOpen(0,$event)" (selectItem)="selectItem(0,$event)"
+      ></down-select>
+      <search-box [placeholder]="searchTip1" (searchWord)="search($event)"></search-box>
+    </div>
+    <div class="table-list">
+      <table-list [th]="th1" [dataList]="dataList1" [operationType]="operationType" (lookDetail)="toDetail()"></table-list>
     </div>
     <div class="footer-div-page">
       <div-page (getCurrentPage)="switchPage($event)"></div-page>
