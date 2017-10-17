@@ -1,6 +1,6 @@
 <div class="container">
     <aside class="aside">
-      <a [routerLink]="['']" style="display: block">
+      <a [routerLink]="['']" target="_blank" style="display: block">
         <p class="logo">
           平台管理后台
         </p>
@@ -24,19 +24,20 @@
       </div>
     </aside>
     <main class="main">
+
       <div class="top">
         <span>终端测试</span>
         <div class="fr menu-down" (click)="openTop()">
           你好,Admin
-          <img class="arrow " src="../../../assets/image/arrow-up.png" *ngIf="isDown">
-          <img class="arrow " src="../../../assets/image/arrow-down.png" *ngIf="!isDown">
+          <img class="arrow " src="../../../assets/image/arrow-up.png" *ngIf="isDown" (click)="openTop()">
+          <img class="arrow " src="../../../assets/image/arrow-down.png" *ngIf="!isDown" (click)="openTop()">
         </div>
-        <div class="down-select">
-          <ul class="items">
+        <div class="down-select"  *ngIf="isDown">
+          <ul class="items" >
             <li class="item">13156547811</li>
-            <li class="item">平台信息设置</li>
-            <li class="item">修改密码</li>
-            <li class="item">退出登录</li>
+            <li class="item" [routerLink]="['/terrace',1]" (click)="openTop()">平台信息设置</li>
+            <li class="item" (click)="openTop()">修改密码</li>
+            <li class="item" (click)="openTop()">退出登录</li>
           </ul>
         </div>
       </div>

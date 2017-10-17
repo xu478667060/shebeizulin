@@ -129,7 +129,7 @@ img {
 }
 
 .info-msg ul li.row-3 {
-  width: 29%;
+  width: 31%;
 }
 
 .info-msg ul li.row-2 {
@@ -362,6 +362,9 @@ img {
 
 /***一些特别的申请按钮***/
 /**申请按钮**/
+button:hover{
+  cursor: pointer;
+}
 .accept{
   background-color: #00b64f;
   margin-right: 16px;
