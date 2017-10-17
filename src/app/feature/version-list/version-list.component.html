@@ -25,7 +25,7 @@
         <span>删除版本</span>
         <span class="color-primary">V2.035.zip</span>
       </div>
-      <div class="footer">
+      <div class="footer center">
         <button class="l-btn-p" (click)="delete()">删除</button>
         <button class="l-btn-w" (click)="cancelDelete()">取消</button>
       </div>
@@ -38,12 +38,29 @@
     <div class="l-modal-title">
       上传PUMP表
       <!--模态窗口关闭按钮-->
-      <span class="modal-close-btn">
+      <span class="modal-close-btn" (click)="cancelDelete()">
       </span>
     </div>
     <div class="l-modal-body">
       <p>版本文件</p>
       <p class="p-upload-file"><span style="color: #ffba35">上传文件</span>（zip）</p>
+      <div class="progress">
+        <div class="line">
+          <div class="bg" [style.width.%]="60"></div>
+        </div>
+        <span class="value">60%</span>
+        <span class="delete-file"></span>
+      </div>
+      <div class="big-input">
+        <label for="remark">备注</label>
+        <div class="input l-input">
+          <input type="text" id="remark" placeholder="无">
+        </div>
+      </div>
+      <div class="footer">
+        <button class="l-btn-p">保存</button>
+        <button class="l-btn-w" (click)="cancelDelete()">取消</button>
+      </div>
     </div>
   </div>
 </ng-template>

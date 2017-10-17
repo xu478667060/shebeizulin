@@ -148,8 +148,6 @@ img {
 }
 
 .l-modal-box{
-
-  height: 200px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -170,22 +168,71 @@ img {
   background: url("assets/image/modal-colse.png") no-repeat;
   right: 20px;
   top: 19px;
+  cursor: pointer;
 }
 .modal-close-btn:hover{
   background: url("assets/image/modal-colse-hover.png") no-repeat;
-  cursor: pointer;
 }
 .l-modal-body{
   margin-top: 24px;
-  padding-left: 20px;
+  padding: 0 20px 30px 20px;
 }
-.p-upload-file{
-  margin: 13px 0 17px 0;
-}
+
 .l-modal-body p{
   font-size: 14px;
   color: #444;
 }
+
+/*
+ 长input
+*/
+.big-input{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.big-input label{
+  display: block;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.big-input .input{
+  width: 100%;
+  border:1px solid #e0e0e0;
+  height: 32px;
+  box-sizing: content-box;
+}
+.big-input input{
+  outline: none;
+  border: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 32px;
+  padding-left: 12px;
+}
+
+/*
+  短input
+*/
+
+.l-input:hover,
+.l-input:focus
+{
+  color: #444;
+  line-height: 1.5;
+}
+.l-input input::placeholder{
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.center{
+  text-align: center;
+}
+
 /**/
 
 

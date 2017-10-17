@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {NzModalService, NzModalSubject} from "ng-zorro-antd";
 
 /**
  * Author : 李文超
@@ -12,6 +13,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./terminal-list.component.css']
 })
 export class TerminalListComponent implements OnInit {
+
+
+  @ViewChild("editModal")
+  editModal:ElementRef
+
+  _editModal:NzModalSubject
 
   selectList = [{
     list: ["所有状态", "启用", "停用"],
@@ -141,7 +148,7 @@ export class TerminalListComponent implements OnInit {
     tips: "终端会在60秒内重新启动"   // 失败  请检查终端是否在线
   }
 
-  constructor() {
+  constructor(private _modal:NzModalService) {
 
   }
 
@@ -178,5 +185,18 @@ export class TerminalListComponent implements OnInit {
     },2000)
   }
 
+  cancelDelete(){
+    this._editModal.destroy()
+  }
+
+  edit(){
+    this._editModal = this._modal.open({
+      content:this.editModal,
+      footer:false,
+      width:"440px",
+      closable : false,
+      wrapClassName:"version-modal-center",
+    })
+  }
 
 }

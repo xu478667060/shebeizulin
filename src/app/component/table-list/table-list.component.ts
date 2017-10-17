@@ -24,6 +24,8 @@ export class TableListComponent implements OnInit {
 
   @Output() restart = new EventEmitter()
 
+  @Output() edit = new EventEmitter()
+
   constructor() {
   }
 
@@ -40,5 +42,8 @@ export class TableListComponent implements OnInit {
 
   _restart(){
     this.restart.emit()
+  }
+  _edit(){
+    this.edit.emit()
   }
 }

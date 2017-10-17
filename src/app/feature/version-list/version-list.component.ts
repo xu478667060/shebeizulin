@@ -117,7 +117,12 @@ export class VersionListComponent implements OnInit {
   }
   // 取消删除
   cancelDelete(){
-    this._deleteSureModal.destroy()
+    if (this._deleteSureModal){
+      this._deleteSureModal.destroy()
+    }
+    if(this._uploadModal){
+      this._uploadModal.destroy()
+    }
   }
 
   delete(){
@@ -129,7 +134,7 @@ export class VersionListComponent implements OnInit {
   }
 
   upload(){
-    this._modal.open({
+    this._uploadModal = this._modal.open({
       content:this.uploadModal,
       footer:false,
       width:"440px",

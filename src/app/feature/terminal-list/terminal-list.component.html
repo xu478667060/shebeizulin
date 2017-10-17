@@ -10,12 +10,30 @@
       <search-box [placeholder]="searchTip" (searchWord)="search($event)"></search-box>
     </div>
     <div class="table-list">
-      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType" (restart)="restart()"></table-list>
+      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType" (restart)="restart()"
+                  (edit)="edit()"
+      ></table-list>
     </div>
     <div class="footer-div-page">
       <div-page (getCurrentPage)="switchPage($event)"></div-page>
     </div>
   </div>
 </div>
+
+<ng-template #editModal>
+  <div class="l-modal-box">
+    <div class="l-modal-title">
+      终端信息
+      <!--模态窗口关闭按钮-->
+      <span class="modal-close-btn" (click)="cancelDelete()">
+      </span>
+    </div>
+    <div class="l-modal-body">
+
+
+
+    </div>
+  </div>
+</ng-template>
 
 <sure-modal [(options)]="sureOption"></sure-modal>
