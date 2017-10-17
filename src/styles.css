@@ -148,11 +148,53 @@ img {
 }
 
 .l-modal-box{
-  background: #fff;
+
   height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
+.l-modal-title{
+  height: 48px;
+  line-height: 48px;
+  background-color: #ffba35;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+}
+.modal-close-btn{
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background: url("assets/image/modal-colse.png") no-repeat;
+  right: 20px;
+  top: 19px;
+}
+.modal-close-btn:hover{
+  background: url("assets/image/modal-colse-hover.png") no-repeat;
+  cursor: pointer;
+}
+.l-modal-body{
+  margin-top: 24px;
+  padding-left: 20px;
+}
+.p-upload-file{
+  margin: 13px 0 17px 0;
+}
+.l-modal-body p{
+  font-size: 14px;
+  color: #444;
+}
+/**/
+
+
+
 /*ant-design样式修改*/
+.ant-modal-content{
+  border-radius: 10px!important;
+}
+
 
 .ant-modal-body{
   padding: 0 !important;

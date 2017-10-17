@@ -20,23 +20,32 @@
 <!--modal模板 删除确认 -->
 <ng-template #deleteSureModal>
   <div class="deleteSure">
-      <div class="delete-version">
-        <div class="word-tip">
-          <span>删除版本</span>
-          <span class="color-primary">V2.035.zip</span>
-        </div>
-        <div class="footer">
-          <button class="l-btn-p" (click)="delete()">删除</button>
-          <button class="l-btn-w" (click)="cancelDelete()">取消</button>
-        </div>
+    <div class="delete-version">
+      <div class="word-tip">
+        <span>删除版本</span>
+        <span class="color-primary">V2.035.zip</span>
       </div>
+      <div class="footer">
+        <button class="l-btn-p" (click)="delete()">删除</button>
+        <button class="l-btn-w" (click)="cancelDelete()">取消</button>
+      </div>
+    </div>
   </div>
 </ng-template>
 <!--modal模板 上传pump表 -->
 <ng-template #uploadModal>
- <div class="l-modal-box">
-
- </div>
+  <div class="l-modal-box">
+    <div class="l-modal-title">
+      上传PUMP表
+      <!--模态窗口关闭按钮-->
+      <span class="modal-close-btn">
+      </span>
+    </div>
+    <div class="l-modal-body">
+      <p>版本文件</p>
+      <p class="p-upload-file"><span style="color: #ffba35">上传文件</span>（zip）</p>
+    </div>
+  </div>
 </ng-template>
 
 <sure-modal [options]="sureOption"></sure-modal>

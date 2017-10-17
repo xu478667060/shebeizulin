@@ -132,7 +132,9 @@ export class VersionListComponent implements OnInit {
     this._modal.open({
       content:this.uploadModal,
       footer:false,
-      width:"440px"
+      width:"440px",
+      closable : false,
+      wrapClassName:"version-modal-center",
     })
   }
 
