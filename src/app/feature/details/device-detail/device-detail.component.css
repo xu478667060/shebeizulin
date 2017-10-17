@@ -71,3 +71,16 @@
   padding-left: 10px;
 }
 
+.callMerchant{
+  width: 92px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #fff;
+  border: 1px solid #ffba35;
+  color: #ffba35;
+  border-radius: 16px;
+}
+.callMerchant:hover{
+  background-color: #ffba35;
+  color: #fff;
+}

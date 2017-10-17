@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-device-list',
@@ -112,7 +113,7 @@ export class DeviceListComponent implements OnInit {
 
   operationType = "device"
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -139,4 +140,7 @@ export class DeviceListComponent implements OnInit {
     console.log(pageNum)
   }
 
+  toDetail(){
+    this.router.navigate()
+  }
 }

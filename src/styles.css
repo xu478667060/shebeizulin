@@ -362,6 +362,9 @@ img {
 
 /***一些特别的申请按钮***/
 /**申请按钮**/
+button:hover{
+  cursor: pointer;
+}
 .accept{
   background-color: #00b64f;
   margin-right: 16px;
