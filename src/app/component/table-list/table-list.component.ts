@@ -20,6 +20,10 @@ export class TableListComponent implements OnInit {
 
   @Output() lookDetail = new EventEmitter()
 
+  @Output() delete = new EventEmitter()
+
+  @Output() restart = new EventEmitter()
+
   constructor() {
   }
 
@@ -28,5 +32,13 @@ export class TableListComponent implements OnInit {
 
   _lookDetail(){
     this.lookDetail.emit()
+  }
+
+  _delete(){
+     this.delete.emit()
+  }
+
+  _restart(){
+    this.restart.emit()
   }
 }

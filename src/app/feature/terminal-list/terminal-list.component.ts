@@ -130,6 +130,17 @@ export class TerminalListComponent implements OnInit {
 
   operationType = "terminal"
 
+
+  /*
+  * 操作提示
+  * */
+  sureOption = {
+    open:false,
+    type: 1,                        // 0
+    title: "重启成功",              // 重启失败
+    tips: "终端会在60秒内重新启动"   // 失败  请检查终端是否在线
+  }
+
   constructor() {
 
   }
@@ -158,6 +169,13 @@ export class TerminalListComponent implements OnInit {
   // TODO:分页查询
   switchPage(pageNum){
     console.log(pageNum)
+  }
+
+  restart(){
+    this.sureOption.open = true
+    setTimeout(()=>{
+      this.sureOption.open = false
+    },2000)
   }
 
 

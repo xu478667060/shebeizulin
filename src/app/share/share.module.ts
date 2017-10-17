@@ -12,6 +12,7 @@ import {SwitchItemComponent} from "../component/switch-item/switch-item.componen
 import {StepsComponent} from "../component/steps/steps.component";
 
 import {ChartComponent} from "../component/chart/chart.component";
+import {SureModalComponent} from "../component/sure-modal/sure-modal.component";
 
 @NgModule({
   imports: [
@@ -32,9 +33,9 @@ import {ChartComponent} from "../component/chart/chart.component";
     TableListComponent,
     DivPageComponent,
     SwitchItemComponent,
-
+    SureModalComponent,
     DivPageComponent,
-      StepsComponent,
+    StepsComponent,
     NgZorroAntdModule,
     ChartComponent
   ],
@@ -44,7 +45,7 @@ import {ChartComponent} from "../component/chart/chart.component";
     TableListComponent,
     DivPageComponent,
     SwitchItemComponent,
-
+    SureModalComponent,
     DivPageComponent,
     ChartComponent,
       StepsComponent,

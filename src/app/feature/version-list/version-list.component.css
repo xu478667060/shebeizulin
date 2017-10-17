@@ -1,0 +1,26 @@
+.deleteSure{
+}
+
+.delete-version{
+  padding:60px 0 30px 0;
+  font-size: 20px;
+  color:#444;
+}
+.delete-version span:first-child{
+  margin-right: 10px;
+}
+.footer{
+  text-align: center;
+}
+.footer button:first-child{
+  margin-right: 16px;
+}
+.word-tip{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.uploadPump .l-btn-p:hover{
+  background: #f7ab12 !important;
+  box-shadow:0 2px 8px rgba(255,186,53,.4) !important;
+}

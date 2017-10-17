@@ -29,7 +29,7 @@
       <div class="operation" *ngIf="operationType==='terminal'">
         <ul>
           <li title="更新" class="update"></li>
-          <li title="重启" class="restart"></li>
+          <li title="重启" class="restart" (click)="_restart()"></li>
           <li title="修改" class="edit"></li>
         </ul>
       </div>
@@ -38,7 +38,7 @@
       <div class="operation" *ngIf="operationType==='version'">
         <ul>
           <li title="下载" class="download"></li>
-          <li title="删除" class="delete"></li>
+          <li title="删除" class="delete" (click)="_delete()"></li>
         </ul>
       </div>
       <!--设备列表-->

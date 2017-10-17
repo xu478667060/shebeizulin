@@ -113,6 +113,56 @@ img {
   margin-left: 20px;
 }
 
+.color-primary{
+  color:#ffba35;
+}
+
+.l-btn-p{
+  background: #ffba35;
+  font-size: 14px;
+  color:#fff;
+  width: 120px;
+  height: 32px;
+  border-radius: 16px;
+  border: 0;
+  outline: none;
+}
+
+.l-btn-p:hover{
+  background:#f5371d;
+  box-shadow: 2px 2px 8px rgba(255,77,53,.4);
+}
+.l-btn-w{
+  border:1px solid #e0e0e0;
+  background: #fff;
+  font-size: 14px;
+  color:#444;
+  width: 120px;
+  height: 32px;
+  border-radius: 16px;
+  outline: none;
+}
+.l-btn-w:hover{
+  background: #cccccc;
+  box-shadow: 2px 2px 8px rgba(64,64,647,.16);
+}
+
+.l-modal-box{
+  background: #fff;
+  height: 200px;
+}
+
+/*ant-design样式修改*/
+
+.ant-modal-body{
+  padding: 0 !important;
+}
+
+.version-modal-center .ant-modal{
+   top:30%;
+}
+
+
 /*李文超 结束*/
 .flex {
   display: flex;

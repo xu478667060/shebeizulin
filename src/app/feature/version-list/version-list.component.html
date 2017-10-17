@@ -2,9 +2,14 @@
   <div class="content-wrap">
     <div class="top-content">
       <search-box [placeholder]="searchTip" (searchWord)="search($event)" style="margin-left: 0"></search-box>
+      <div class="uploadPump fr">
+        <button class="l-btn-p" (click)="upload()">上传PUMP表</button>
+      </div>
     </div>
     <div class="table-list">
-      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType"></table-list>
+      <table-list [th]="th" [dataList]="dataList" [operationType]="operationType"
+                  (delete)="deleteSure()"
+      ></table-list>
     </div>
     <div class="footer-div-page">
       <div-page (getCurrentPage)="switchPage($event)"></div-page>
@@ -12,7 +17,26 @@
   </div>
 </div>
 
-<!--删除modal模板-->
-<ng-template #deleteModal>
-
+<!--modal模板 删除确认 -->
+<ng-template #deleteSureModal>
+  <div class="deleteSure">
+      <div class="delete-version">
+        <div class="word-tip">
+          <span>删除版本</span>
+          <span class="color-primary">V2.035.zip</span>
+        </div>
+        <div class="footer">
+          <button class="l-btn-p" (click)="delete()">删除</button>
+          <button class="l-btn-w" (click)="cancelDelete()">取消</button>
+        </div>
+      </div>
+  </div>
 </ng-template>
+<!--modal模板 上传pump表 -->
+<ng-template #uploadModal>
+ <div class="l-modal-box">
+
+ </div>
+</ng-template>
+
+<sure-modal [options]="sureOption"></sure-modal>

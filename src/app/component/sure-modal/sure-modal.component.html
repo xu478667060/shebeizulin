@@ -1,0 +1,10 @@
+<div class="sure-box" *ngIf="options.open" >
+  <div class="sure-content">
+    <div class="tip-img">
+      <img src="../../../assets/image/operation-success.png" alt="操作成功" *ngIf="options.type===1">
+      <img src="../../../assets/image/operation-fail.png" alt="操作失败" *ngIf="options.type===0">
+    </div>
+    <p class="title">{{options.title}}</p>
+    <span class="tips" *ngIf="options.tips!==''">{{options.tips}}</span>
+  </div>
+</div>

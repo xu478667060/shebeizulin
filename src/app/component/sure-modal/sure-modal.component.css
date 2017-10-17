@@ -1,0 +1,44 @@
+.sure-box{
+  position: fixed;
+  top: 0%;
+  bottom: 0;
+  left:0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.sure-content{
+  background: #fff;
+  border-radius: 8px;
+  width: 320px;
+  height: 220px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(64,65,67,.16);
+}
+.tip-img{
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+.tip-img img{
+  width: 60px;
+  height: 60px;
+}
+
+.title{
+  font-size: 20px;
+  color:#444;
+  margin-bottom: 16px;
+}
+
+.tips{
+  font-size: 14px;
+  color: #919191;
+}

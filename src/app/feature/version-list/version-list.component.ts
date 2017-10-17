@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {NzModalService, NzModalSubject} from "ng-zorro-antd";
 
 @Component({
   selector: 'app-version-list',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VersionListComponent implements OnInit {
 
-  searchTip= '请输入终端编号或归属'
+  @ViewChild("deleteSureModal")
+  deleteSureModal: ElementRef
+
+  _deleteSureModal:NzModalSubject
+
+
+  @ViewChild("uploadModal")
+  uploadModal: ElementRef
+
+  _uploadModal:NzModalSubject
+
+  searchTip = '请输入终端编号或归属'
 
   th: Array<any> = [
     {name: "名称", type: "big-large"},
@@ -64,12 +76,25 @@ export class VersionListComponent implements OnInit {
     ]
   ]
 
-  operationType:string = "version"
+  operationType: string = "version"
 
-  constructor() { }
+  /*
+  * 确认配置
+  * */
+  sureOption:any = {
+    open:false,
+    type:0,
+    title:"删除失败",
+    tips:""
+  }
+
+  constructor(private _modal: NzModalService) {
+  }
 
   ngOnInit() {
+
   }
+
 
   // TODO:搜索 筛选列表
   search(keyWord: string) {
@@ -77,8 +102,38 @@ export class VersionListComponent implements OnInit {
   }
 
   // TODO:分页查询
-  switchPage(pageNum){
+  switchPage(pageNum) {
     console.log(pageNum)
+  }
+
+  // TODO:删除确认
+  deleteSure() {
+     this._deleteSureModal = this._modal.open({
+      content:this.deleteSureModal,
+      width:"320px",
+      wrapClassName:"version-modal-center",
+      footer:false,
+    })
+  }
+  // 取消删除
+  cancelDelete(){
+    this._deleteSureModal.destroy()
+  }
+
+  delete(){
+    this.cancelDelete()
+    this.sureOption.open = true
+    setTimeout(()=>{
+      this.sureOption.open = false
+    },2000)
+  }
+
+  upload(){
+    this._modal.open({
+      content:this.uploadModal,
+      footer:false,
+      width:"440px"
+    })
   }
 
 }
