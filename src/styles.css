@@ -246,7 +246,8 @@ img {
   height: 30px;
   font-size: 14px;
   line-height: 32px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  display: flex;
 }
 
 .info-span {
@@ -325,9 +326,7 @@ img {
   width: 100%;
   margin-top: 15px;
 }
-.maintains-title{
-  margin-left: 20px;
-}
+
 .info-basic>img{
   width:98px;
   height: 98px;
@@ -430,5 +429,37 @@ button:hover{
   background-color: #f5371d;
   box-shadow: 0 2px 8px rgba(255,77,53,.4);
 }
+
+/**设备详情的公共部分**/
+
+.maintain-top{
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 36px;
+}
+.maintain-change{
+  font-size: 16px;
+  color: #999;
+  position: relative;
+  line-height: 60px;
+  margin-right: 36px;
+}
+.maintain-change:hover{
+  color: #ffba35;
+  cursor: pointer;
+}
+.maintain-change.change{
+  color: #ffba35;
+}
+.maintain-change span{
+  width: 60px;
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  height: 3px;
+  background-color: #ffba35;
+}
+
 
 /**********分割线************/
