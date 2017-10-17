@@ -1,0 +1,286 @@
+<div class="content">
+  <div class="details">
+    <div class="maintain-top flex">
+      <p class="maintain-change" [class.change]="deviceDetail.isChange" (click)="switch(deviceDetail)">
+        {{deviceDetail.name}}
+        <span *ngIf="deviceDetail.isChange"></span>
+      </p>
+      <p class="maintain-change" [class.change]="realTimeData.isChange" (click)="switch(realTimeData)">
+        {{realTimeData.name}}
+        <span *ngIf="realTimeData.isChange"></span>
+      </p>
+    </div>
+    <!--重要内容-->
+    <div class="maintain-detail-content" [hidden]="!deviceDetail.isChange">
+      <div class="details-info">
+        <p class="info-title flex ">
+          <span></span>
+          基本信息
+        </p>
+        <div class="info-msg">
+          <ul class="flex">
+            <li class="row-1">
+              商品标题 :
+              <span class="info-span">葫芦娃葫芦娃葫芦娃</span>
+            </li>
+            <li class="row-4">
+              设备编号 :
+              <span class="info-span">132456789</span>
+            </li>
+            <li class="row-4">
+              设备名称 :
+              <span class="info-span">一个很牛逼的设备名称</span>
+            </li>
+            <li class="row-4">
+              品牌 :
+              <span class="info-span">葫芦娃</span>
+            </li>
+            <li class="row-4">
+              型号 :
+              <span class="info-span">Dt-4879-Lt</span>
+            </li>
+            <!--第二行-->
+            <li class="row-4">
+              设备类型 :
+              <span class="info-span">发电机组</span>
+            </li>
+            <li class="row-4">
+              设备状态 :
+              <span class="info-span">葫芦娃</span>
+            </li>
+            <li class="row-4">
+              功率 :
+              <span class="info-span">3KW</span>
+            </li>
+            <li class="row-4"></li>
+            <li class="row-4">
+              设备租价 :
+              <span class="info-span device-rent">
+                <p style="margin-top: 6px">¥ 2000.00/30天</p>
+                <p>¥ 2000.00/30天</p>
+                <p>¥ 2000.00/30天</p>
+              </span>
+            </li>
+            <li class="row-4 infos-other">
+              设备押金 :
+              <span class="info-span">12345</span>
+            </li>
+            <li class="row-1 img" style="margin-top: 6px">
+              设备图片 :
+              <img src="../../../../assets/image/detail-img.png">
+              <img src="../../../../assets/image/detail-img.png">
+              <img src="../../../../assets/image/detail-img.png">
+            </li>
+            <li class="row-1"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="details-info">
+        <p class="info-title flex">
+          <span></span>
+          详细参数
+        </p>
+        <div class="info-msg">
+          <ul class="flex">
+            <li class="row-4">
+              额定电流 :
+              <span class="info-span">30A</span>
+            </li>
+            <li class="row-4">
+              额定频率 :
+              <span class="info-span">25Hz</span>
+            </li>
+            <li class="row-4">
+              外形尺寸 :
+              <span class="info-span">100*100cm</span>
+            </li>
+            <li class="row-4">
+              机组重量 :
+              <span class="info-span">1234kg</span>
+            </li>
+            <li class="row-4">
+               &nbsp; &nbsp; &nbsp; &nbsp;噪音 :
+              <span class="info-span">1234kg</span>
+            </li>
+            <li class="row-4">
+              燃油消耗 :
+              <span class="info-span">1kw/1kg</span>
+            </li>
+            <li class="row-1">
+              &nbsp; &nbsp; &nbsp; &nbsp;其他 :
+              <span class="info-span">葫芦娃葫芦娃葫芦娃葫芦娃葫芦娃，葫芦娃葫芦娃</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="details-info">
+        <p class="info-title flex">
+          <span></span>
+          终端信息
+        </p>
+        <div class="info-msg">
+          <ul class="flex">
+            <li class="row-4">
+              终端绑定 :
+              <span class="info-span">123456789</span>
+            </li>
+            <li class="row-4">
+              状态 :
+              <span class="info-span" [class.info-start]="isStart">启用</span>
+            </li>
+            <li class="row-4">
+              通讯状态 :
+              <span class="info-span">离线</span>
+            </li>
+            <li class="row-4">
+              剩余天数 :
+              <span class="info-span">10天</span>
+            </li>
+            <li class="row-4">
+              启用时间 :
+              <span class="info-span">2014-01-10</span>
+            </li>
+            <li class="row-4">
+              停用时间 :
+              <span class="info-span">2015-01-20</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="details-info">
+        <p class="info-title flex">
+          <span></span>
+          归属信息
+        </p>
+        <div class="info-msg">
+          <ul class="flex">
+            <li class="row-4">
+              商家编号 :
+              <span class="info-span">12345679</span>
+            </li>
+            <li class="row-4">
+              店铺名称 :
+              <span class="info-span">一个很牛逼的店铺名称</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="details-info">
+        <p class="info-title flex">
+          <span></span>
+          租赁信息
+        </p>
+        <div class="info-msg">
+          <ul class="flex">
+            <li class="row-4">
+              租赁人 :
+              <span class="info-span">李四</span>
+            </li>
+            <li class="row-4">
+              联系方式 :
+              <span class="info-span">1234567897</span>
+            </li>
+            <li class="row-2"></li>
+            <li class="row-4">
+              &nbsp;&nbsp;&nbsp;&nbsp;租期 :
+              <span class="info-span">60天</span>
+            </li>
+            <li class="row-4">
+              开始时间 :
+              <span class="info-span">2017-10-16</span>
+            </li>
+            <li class="row-4">
+              结束时间 :
+              <span class="info-span">2017-12-16</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="details-info info-last">
+        <p class="info-title flex">
+          <span></span>
+          属性值范围
+        </p>
+        <div class="attr-range info-msg">
+          <ul class="flex">
+            <li class="row-2 flex">
+              <i>系统工作状态 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>发电机状态 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>远程开机状态 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>ATS状态 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>市电状态 </i>
+              <span class="info-span" style="text-indent: 28px">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>发电延迟值 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+            <i>远程开机延时值 </i>
+            <span class="info-span">
+                没有模式
+              </span>
+          </li>
+            <li class="row-2 flex">
+              <i>开机转换延时值 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+            <i>远程开机延时值 </i>
+            <span class="info-span">
+                没有模式
+              </span>
+          </li>
+            <li class="row-2 flex">
+              <i>远程开机延时值 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>市电延时值 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+            <li class="row-2 flex">
+              <i>远程开机延时值 </i>
+              <span class="info-span">
+                没有模式
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="maintain-detail-content" [hidden]="!realTimeData.isChange">
+      实时数据内容
+    </div>
+  </div>
+</div>

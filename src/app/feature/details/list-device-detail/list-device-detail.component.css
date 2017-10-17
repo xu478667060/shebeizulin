@@ -1,0 +1,36 @@
+.device-rent p{
+    height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.info-span.info-start{
+  color: #00b64f;
+}
+.info-start{
+  color: #ffba35;
+}
+.attr-range{
+  width: 100%;
+  padding: 0 28px;
+  border: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+.attr-range ul{
+  padding: 10px 0;
+  width: 100%;
+}
+.attr-range ul li{
+  height: 28%;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+.attr-range ul li i{
+  font-style: normal;
+  font-size: 14px;
+  color: #444;
+  margin-right: 25%;
+}
+.attr-range ul li span.info-span{
+  width: 200px;
+  text-align: left;
+}

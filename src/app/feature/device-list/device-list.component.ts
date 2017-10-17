@@ -141,6 +141,6 @@ export class DeviceListComponent implements OnInit {
   }
 
   toDetail(){
-    this.router.navigate([''])
+    this.router.navigate(['device','list-device-detail',1])
   }
 }
