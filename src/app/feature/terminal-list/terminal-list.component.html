@@ -29,9 +29,99 @@
       </span>
     </div>
     <div class="l-modal-body">
-
-
-
+      <div class="input-box">
+        <div class="small-input">
+          <label for="terminal_code">终端编号</label>
+          <div class="input" >
+            <input type="text" id="terminal_code" disabled>
+          </div>
+        </div>
+        <div class="small-input">
+          <label for="version_code">版本编号</label>
+          <div class="input">
+            <input type="text" id="version_code" disabled>
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="small-input">
+          <label for="state">状态</label>
+          <div class="input" >
+            <input type="text" id="state" disabled>
+          </div>
+        </div>
+        <div class="small-input">
+          <label for="status">通讯状态</label>
+          <div class="input">
+            <input type="text" id="status" disabled>
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="big-input">
+          <label for="sim"><span class="red-star">*</span> SIM卡</label>
+          <div class="input l-input">
+            <input type="text" id="sim">
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="small-input">
+          <label for="controller_info"><span class="red-star">*</span> 控制器信息</label>
+          <div class="input l-input" >
+            <input type="text" id="controller_info">
+          </div>
+        </div>
+        <div class="small-input">
+          <label for="bind_gps"><span class="red-star">*</span> 绑定GPS</label>
+          <div class="input l-input">
+            <input type="text" id="bind_gps">
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="small-input ">
+          <label for="belong">
+            <span class="red-star">*</span>
+            归属
+          </label>
+          <div class="input l-input">
+            <input type="text" id="belong">
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="small-input">
+          <label for="s-e-time1" style="width: 200px">
+            <span class="red-star">*</span>
+            启停时间 (有效期28天)
+          </label>
+          <div class="time-input">
+            <nz-datepicker id="s-e-time1" [(ngModel)]="_date1" [nzPlaceHolder]="'开始时间'"></nz-datepicker>
+          </div>
+        </div>
+        <div class="small-input">
+          <label for="s-e-time2" style="width: 200px">
+            <span class="red-star">*</span>
+            启停时间 (有效期28天)
+          </label>
+          <div class="time-input">
+            <nz-datepicker id="s-e-time2" [(ngModel)]="_date2" [nzPlaceHolder]="'结束时间'"></nz-datepicker>
+          </div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="small-input">
+          <label for="remark">备注</label>
+          <div class="input l-input">
+            <input type="text" id="remark">
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="l-btn-p">保存</button>
+        <button class="l-btn-w" (click)="cancelDelete()">取消</button>
+      </div>
     </div>
   </div>
 </ng-template>

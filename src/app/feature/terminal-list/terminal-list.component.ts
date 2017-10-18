@@ -148,6 +148,11 @@ export class TerminalListComponent implements OnInit {
     tips: "终端会在60秒内重新启动"   // 失败  请检查终端是否在线
   }
 
+
+  _date1;
+  _date2;
+
+
   constructor(private _modal:NzModalService) {
 
   }
@@ -195,7 +200,7 @@ export class TerminalListComponent implements OnInit {
       footer:false,
       width:"440px",
       closable : false,
-      wrapClassName:"version-modal-center",
+      wrapClassName:"terminal-edit-modal-center",
     })
   }
 

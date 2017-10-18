@@ -188,23 +188,30 @@ img {
 */
 .big-input{
   width: 100%;
-  margin-bottom: 30px;
 }
 
-.big-input label{
+.big-input label,
+.small-input label
+{
   display: block;
   font-size: 14px;
   color: #444;
   margin-bottom: 12px;
+  cursor: pointer;
+  width: 90px;
 }
 
-.big-input .input{
+.big-input .input,
+.small-input .input
+{
   width: 100%;
   border:1px solid #e0e0e0;
   height: 32px;
   box-sizing: content-box;
 }
-.big-input input{
+.big-input .input input,
+.small-input .input input
+{
   outline: none;
   border: 0;
   width: 100%;
@@ -214,27 +221,49 @@ img {
   padding-left: 12px;
 }
 
+.red-star{
+  color:red;
+  margin-right: 5px;
+}
 /*
   短input
 */
 
+.input-box:not(:first-child){
+  margin-top: 16px;
+}
+
+.input-box .small-input:first-child{
+  margin-right: 16px;
+}
+
+.small-input{
+  width: 190px;
+  height: 32px;
+  display: inline-block;
+}
+
 .l-input:hover,
-.l-input:focus
+.l-input:focus,
+.l-input:active
 {
   color: #444;
   line-height: 1.5;
 }
+.l-input input:hover,.l-input input:focus{
+  color: #444;
+  line-height: 1.5;
+  border:1px solid #ccc;
+}
+
 .l-input input::placeholder{
-  font-size: 16px;
+  font-size: 14px;
   color: #cccccc;
 }
 
 .center{
   text-align: center;
 }
-
-/**/
-
 
 
 /*ant-design样式修改*/
@@ -247,10 +276,28 @@ img {
   padding: 0 !important;
 }
 
-.version-modal-center .ant-modal{
-   top:30%;
+.time-input .ant-input{
+   padding: 4px 24px !important;
+  height: 32px !important;
+}
+.time-input .ant-input:hover,
+.time-input .ant-input:focus{
+  border:1px solid #ccc !important;
 }
 
+
+.version-upload-modal-center .ant-modal{
+   top: 40%;
+   margin-top: -201px;
+}
+.version-delete-modal-center .ant-modal{
+   top: 40%;
+   margin-top: -142px;
+}
+.terminal-edit-modal-center .ant-modal{
+  top: 50%;
+  margin-top: -340px;
+}
 
 /*李文超 结束*/
 .flex {

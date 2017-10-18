@@ -111,7 +111,7 @@ export class VersionListComponent implements OnInit {
      this._deleteSureModal = this._modal.open({
       content:this.deleteSureModal,
       width:"320px",
-      wrapClassName:"version-modal-center",
+      wrapClassName:"version-delete-modal-center",
       footer:false,
     })
   }
@@ -139,7 +139,7 @@ export class VersionListComponent implements OnInit {
       footer:false,
       width:"440px",
       closable : false,
-      wrapClassName:"version-modal-center",
+      wrapClassName:"version-upload-modal-center",
     })
   }
 
