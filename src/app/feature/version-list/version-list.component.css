@@ -10,7 +10,7 @@
   margin-right: 10px;
 }
 .footer{
-
+  margin-top: 30px;
 }
 
 .footer button:first-child{
@@ -28,6 +28,7 @@
   background: #f7ab12 !important;
   box-shadow:0 2px 8px rgba(255,186,53,.4) !important;
 }
+
 
 .progress{
   display:inline-flex;
@@ -66,6 +67,7 @@
   height: 12px;
   background: url(../../../assets/image/delete-modal.png);
 }
+
 .progress .delete-file:hover{
   background: url(../../../assets/image/delete-modal-hover.png);
 }
