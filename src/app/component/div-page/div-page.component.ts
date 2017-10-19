@@ -30,7 +30,7 @@ export class DivPageComponent implements OnInit {
           break
         }
         this.getCurrentPage.emit(--this.pageNum)
-        break
+        break;
       case "next":
         if (this.pageNum === this.total) {
           break
