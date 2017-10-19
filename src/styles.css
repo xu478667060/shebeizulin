@@ -500,6 +500,7 @@ img {
   color: #444;
   height: 30px;
   line-height: 30px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 .maintain-infos li>span{
@@ -514,7 +515,11 @@ img {
 .infos-other i{
   font-style: normal;
   min-height: 60px;
-  width: 290px;
+  width: 306px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 /**身份证验证**/
 .papers{

@@ -13,7 +13,9 @@ import {StepsComponent} from "../component/steps/steps.component";
 
 import {ChartComponent} from "../component/chart/chart.component";
 import {SureModalComponent} from "../component/sure-modal/sure-modal.component";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
+import {EChartOptionDirective1} from "../directive/echart/echart-option.directive";
+import {DeviceDetailComponent} from "../feature/details/device-detail/device-detail.component";
 
 @NgModule({
   imports: [
@@ -40,7 +42,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     DivPageComponent,
     StepsComponent,
     NgZorroAntdModule,
-    ChartComponent
+    ChartComponent,
+    EChartOptionDirective1
   ],
   declarations: [
     DownSelectComponent,
@@ -52,6 +55,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     DivPageComponent,
     ChartComponent,
       StepsComponent,
+    EChartOptionDirective1,
+    DeviceDetailComponent,
 
   ],
   providers: [],

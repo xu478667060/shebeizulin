@@ -5,7 +5,6 @@ import {AppComponent} from './app.component';
 import {ShareModule} from "./share/share.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgZorroAntdModule} from "ng-zorro-antd";
-import { SureModalComponent } from './component/sure-modal/sure-modal.component';
 
 @NgModule({
   declarations: [

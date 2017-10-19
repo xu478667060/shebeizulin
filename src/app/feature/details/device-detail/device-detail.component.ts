@@ -12,6 +12,7 @@ export class DeviceDetailComponent implements OnInit {
   constructor(private router :Router) { }
 
   ngOnInit() {
+
   }
 
 }
