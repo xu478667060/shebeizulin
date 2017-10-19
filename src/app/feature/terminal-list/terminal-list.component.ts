@@ -1,5 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NzModalService, NzModalSubject} from "ng-zorro-antd";
+import {ActivatedRoute, Router} from "@angular/router";
+import {DeviceManageService} from "../../service/device-manage.service";
 
 /**
  * Author : 李文超
@@ -14,6 +16,7 @@ import {NzModalService, NzModalSubject} from "ng-zorro-antd";
 })
 export class TerminalListComponent implements OnInit {
 
+  pageLink:string = "/terminal"
 
   @ViewChild("editModal")
   editModal:ElementRef
@@ -43,100 +46,16 @@ export class TerminalListComponent implements OnInit {
     {name: "操作", type: "flex"}
   ]
 
-  dataList = [
-    [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ], [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ], [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ], [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ], [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ], [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ], [
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ],[
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ],[
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ],[
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ],[
-      {name: "1231313132", type: "small"},
-      {name: "454646545465645", type: "large"},
-      {name: "启动", type: "small"},
-      {name: "在线", type: "small"},
-      {name: "杭州西湖区华彩国际店", type: "large"},
-      {name: "1000", type: "small"},
-      {name: "发电机组01", type: "large"},
-    ],
-  ]
+  dataList = []
+
+
 
   operationType = "terminal"
 
+  currentPage: number = 1
+  totalPages: number
+
+  findOptions: any = {}
 
   /*
   * 操作提示
@@ -153,13 +72,21 @@ export class TerminalListComponent implements OnInit {
   _date2;
 
 
-  constructor(private _modal:NzModalService) {
+  constructor(private _modal:NzModalService,
+              private route:ActivatedRoute,
+              private router:Router,
+              private deviceService:DeviceManageService
+              ) {
 
   }
 
   ngOnInit() {
+    this.getQueryParam()
   }
 
+  /*
+  * 功能
+  * */
   changeOpen(type, bool) {
     this.selectList.forEach(item => {
       item.isSelect = false
@@ -167,20 +94,80 @@ export class TerminalListComponent implements OnInit {
     this.selectList[type].isSelect = bool
   }
 
-  // TODO:点击查询 筛选列表
+  //1. 获取路由的查询参数
+  getQueryParam() {
+    this.route.params
+      .subscribe(data => {
+        this.currentPage = Number(data.id)
+        this.getList(this.currentPage, this.findOptions)
+      })
+  }
+
+  // 2. 获取列表
+  getList(pageNo: number, obj?: any) {
+    this.deviceService.getTerminalList(pageNo, obj)
+      .subscribe(data => {
+        if (data.success) {
+          let res = data.data.list
+          let arr = []
+          for (let i = 0; i < res.length; i++) {
+            let a = []
+            a.push({name: res[i].code, type: this.th[0].type})
+            a.push({name: res[i].controller, type: this.th[1].type})
+            if (res[i].status === 1) {
+              a.push({name: "<span class='normal'>启用</span>", type: this.th[2].type})
+            } else if (res[i].status === 2) {
+              a.push({name: "<span class='stop'>停用</span>", type: this.th[2].type})
+            }
+            if (res[i].online === 1) {
+              a.push({name: "<span class='normal'>在线</span>", type: this.th[3].type})
+            } else if (res[i].authStatus === 2) {
+              a.push({name: "<span class='stop'>离线</span>", type: this.th[3].type})
+            }
+            a.push({name: res[0].belongName, type: this.th[4].type})
+            a.push({name: res[0].days, type: this.th[5].type})
+            a.push({name: res[0].mark, type: this.th[6].type})
+            arr.push({showData: a, rowData: res[i], heightType: 'big-height'})
+          }
+          this.dataList = arr
+          this.totalPages = data.data.totalPages==0?1:data.data.totalPages
+        }
+      })
+  }
+
   // 选择筛选条件
   selectItem(type, item) {
-    console.log(type, item)
+    if(type===0){
+      if(item==="启用"){
+        this.findOptions.status=1
+      }else if(item==="停用"){
+        this.findOptions.status=2
+      }else{
+        delete this.findOptions.status
+      }
+    }else {
+      if(item==="在线"){
+        this.findOptions.online=1
+      }else if(item==="离线"){
+        this.findOptions.online=2
+      }else{
+        delete this.findOptions.online
+      }
+    }
+    this.reLoad()
   }
 
-  // TODO:搜索 筛选列表
+  // 搜索
   search(keyWord: string) {
-    console.log(keyWord)
+    this.findOptions.code = keyWord
+    this.reLoad()
+    delete this.findOptions.code
   }
 
-  // TODO:分页查询
+  // 分页查询
   switchPage(pageNum){
-    console.log(pageNum)
+    this.router.navigate([this.pageLink, pageNum])
+
   }
 
   restart(){
@@ -204,6 +191,18 @@ export class TerminalListComponent implements OnInit {
       closable : false,
       wrapClassName:"terminal-edit-modal-center",
     })
+  }
+
+  /*
+  * 辅助
+  * */
+  reLoad(){
+    if (this.currentPage !== 1) {
+      this.currentPage = 1
+      this.router.navigate([this.pageLink, this.currentPage])
+    } else {
+      this.getList(this.currentPage, this.findOptions)
+    }
   }
 
 }

@@ -13,11 +13,27 @@ export class DeviceManageService {
   constructor(private http:HttpClient) {
   }
 
+  // 获取gps列表
   getGpsList(pageNo:number,obj?:any):Observable<Result>{
-
     let url = `${URL}/gps/page?pageSize=11&pageNo=${pageNo}`
+    if(obj!==null){
+      url += CommonUtils.concatParam(obj)
+    }
+    return this.http.get(url)
+  }
 
+  // 获取版本列表
+  getVersionList(pageNo:number,obj?:any):Observable<Result>{
+    let url = `${URL}/version/page?pageSize=11&pageNo=${pageNo}`
+    if(obj!==null){
+      url += CommonUtils.concatParam(obj)
+    }
+    return this.http.get(url)
+  }
 
+  // 获取终端列表
+  getTerminalList(pageNo:number,obj?:any):Observable<Result>{
+    let url = `${URL}/terminal/page?pageSize=11&pageNo=${pageNo}`
     if(obj!==null){
       url += CommonUtils.concatParam(obj)
     }

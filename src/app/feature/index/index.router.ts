@@ -9,12 +9,12 @@ import {TerraceComponent} from "../terrace/terrace.component";
 const routes: Routes = [
   {
     path: '', component: IndexComponent, children: [
-     {path:'' ,redirectTo:'terminal' ,pathMatch:'full'},
+     {path:'' ,redirectTo:'terminal/1' ,pathMatch:'full'},
     //平台信息
       {path:'terrace/:id' ,component:TerraceComponent},
     /**设备管理**/
-    {path: 'terminal', loadChildren: 'app/feature/terminal-list/terminal-list.module#TerminalListModule'},
-    {path: 'version', loadChildren: 'app/feature/version-list/version-list.module#VersionListModule'},
+    {path: 'terminal/:id', loadChildren: 'app/feature/terminal-list/terminal-list.module#TerminalListModule'},
+    {path: 'version/:id', loadChildren: 'app/feature/version-list/version-list.module#VersionListModule'},
     {path: 'device', loadChildren: 'app/feature/device-list/device-list.module#DeviceListModule'},
 
 

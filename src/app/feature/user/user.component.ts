@@ -11,7 +11,7 @@ import {UserManageService} from "../../service/user-manage.service";
 export class UserComponent implements OnInit {
   pageLink = "/user"
   selectList = [{
-    list: ["所有认证状态", "待审核", "已审核"],
+    list: ["所有认证状态", "已认证", "未认证"],
     isSelect: false
   },
     {
@@ -100,22 +100,33 @@ export class UserComponent implements OnInit {
         }
       })
   }
-
-  // TODO:点击查询 筛选列表
   // 选择筛选条件
   selectItem(type, item) {
-    console.log(type, item)
+    if(type===0){
+      if(item==="未认证"){
+        this.findOptions.authStatus=1
+      }else if(item==="已认证"){
+        this.findOptions.authStatus=2
+      }else{
+        delete this.findOptions.authStatus
+      }
+    }else {
+      if(item==="正常"){
+        this.findOptions.status=1
+      }else if(item==="冻结"){
+        this.findOptions.status=2
+      }else{
+        delete this.findOptions.status
+      }
+    }
+    this.reLoad()
   }
 
-  //搜索 筛选列表
+  //搜索
   search(keyWord: string) {
     this.findOptions.name = keyWord
-    if (this.currentPage !== 1) {
-      this.currentPage = 1
-      this.router.navigate([this.pageLink, this.currentPage])
-    } else {
-      this.getList(this.currentPage, this.findOptions)
-    }
+    this.reLoad()
+    delete this.findOptions.name
   }
 
   // 分页查询
@@ -144,5 +155,13 @@ export class UserComponent implements OnInit {
   /*
   * 辅助
   * */
+  reLoad(){
+    if (this.currentPage !== 1) {
+      this.currentPage = 1
+      this.router.navigate([this.pageLink, this.currentPage])
+    } else {
+      this.getList(this.currentPage, this.findOptions)
+    }
+  }
 
 }

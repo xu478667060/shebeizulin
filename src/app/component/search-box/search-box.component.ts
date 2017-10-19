@@ -12,6 +12,7 @@ export class SearchBoxComponent implements OnInit {
   @Input() placeholder:string
 
   @Output() searchWord = new EventEmitter<string>()
+
   keyWord:string
 
   constructor() {
@@ -22,6 +23,7 @@ export class SearchBoxComponent implements OnInit {
 
   search(){
     this.searchWord.emit(this.keyWord)
+    this.keyWord = ""
   }
 
 

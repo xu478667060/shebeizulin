@@ -16,6 +16,7 @@ import {SureModalComponent} from "../component/sure-modal/sure-modal.component";
 import {HttpClientModule} from "@angular/common/http";
 import {EChartOptionDirective1} from "../directive/echart/echart-option.directive";
 import {DeviceDetailComponent} from "../feature/details/device-detail/device-detail.component";
+import {UiSwitchModule} from "ngx-ui-switch";
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import {DeviceDetailComponent} from "../feature/details/device-detail/device-det
     CommonModule,
     RouterModule,
     HttpClientModule,
+    UiSwitchModule,
     NgZorroAntdModule.forRoot()
   ],
   exports: [
@@ -43,6 +45,7 @@ import {DeviceDetailComponent} from "../feature/details/device-detail/device-det
     StepsComponent,
     NgZorroAntdModule,
     ChartComponent,
+    UiSwitchModule,
     EChartOptionDirective1
   ],
   declarations: [

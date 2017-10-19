@@ -312,6 +312,18 @@ img {
   margin-top: -340px;
 }
 
+/*
+  ui-switch 按钮样式修改
+*/
+.switch-medium{
+  width: 47px !important;
+  height: 26px !important;
+  border-radius: 23px !important;
+}
+.switch-medium small{
+  width: 26px !important;
+  height: 26px !important;
+}
 /*李文超 结束*/
 .flex {
   display: flex;

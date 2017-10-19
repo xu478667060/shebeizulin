@@ -157,3 +157,8 @@
   background: #f7ab12;
   box-shadow:0 2px 8px rgba(255,186,53,.4);
 }
+
+.switchButton>div ui-switch{
+  display: flex;
+  align-items: center;
+}

@@ -26,7 +26,7 @@ export class UserManageService {
   // 获取 获取用户管理列表
   getUserList(pageNo:number,obj?:any):Observable<Result>{
 
-    let url = `${URL}/user/page?pageSize=1&pageNo=${pageNo}`
+    let url = `${URL}/user/page?pageSize=7&pageNo=${pageNo}`
     if(obj!==null){
       url += CommonUtils.concatParam(obj)
     }

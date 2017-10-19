@@ -95,8 +95,8 @@ export class IndexComponent implements OnInit, AfterViewInit {
         img_URL: '../../../assets/image/device-change.png',
         state: 'in',
         childList: [
-          {name: '终端列表', isSelect: this.checkUrl("/terminal"), link: '/terminal', index: 0},
-          {name: '版本列表', isSelect: this.checkUrl("/version"), link: '/version', index: 0},
+          {name: '终端列表', isSelect: this.checkUrl("/terminal"), link: '/terminal/1', index: 0},
+          {name: '版本列表', isSelect: this.checkUrl("/version"), link: '/version/1', index: 0},
           {name: 'GPS列表', isSelect: this.checkUrl("/gps"), link: '/gps/1', index: 0},
           {name: '设备列表', isSelect: this.checkUrl("/device"), link: '/device', index: 0},
         ]

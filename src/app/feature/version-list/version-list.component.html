@@ -12,7 +12,7 @@
       ></table-list>
     </div>
     <div class="footer-div-page">
-      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+      <div-page (getCurrentPage)="switchPage($event)" [total]="totalPages" [pageNum]="currentPage"></div-page>
     </div>
   </div>
 </div>

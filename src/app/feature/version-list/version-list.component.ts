@@ -1,12 +1,16 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NzModalService, NzModalSubject} from "ng-zorro-antd";
-
+import {ActivatedRoute, Router} from "@angular/router";
+import {DeviceManageService} from "../../service/device-manage.service";
+import * as moment from "moment"
 @Component({
   selector: 'app-version-list',
   templateUrl: './version-list.component.html',
   styleUrls: ['./version-list.component.css']
 })
 export class VersionListComponent implements OnInit {
+
+  pageLink = "/version"
 
   @ViewChild("deleteSureModal")
   deleteSureModal: ElementRef
@@ -28,53 +32,11 @@ export class VersionListComponent implements OnInit {
     {name: "操作", type: "flex"}
   ]
 
-  dataList = [
-    [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ], [
-      {name: "v2.035.zip", type: "big-large"},
-      {name: "增加新的设备类型:沙场设备", type: "big-large"},
-      {name: "2017/09/05 09:26:23", type: "big-large"}
-    ]
-  ]
+  dataList = []
+
+  currentPage:number = 1
+  totalPages:number
+  findOptions:any = {}
 
   operationType: string = "version"
 
@@ -88,22 +50,55 @@ export class VersionListComponent implements OnInit {
     tips:""
   }
 
-  constructor(private _modal: NzModalService) {
+  constructor(private _modal: NzModalService,
+              private route:ActivatedRoute,
+              private router:Router,
+              private deviceService:DeviceManageService
+              ) {
   }
 
   ngOnInit() {
-
+      this.getQueryParam()
+  }
+  //1. 获取路由的查询参数
+  getQueryParam() {
+    this.route.params
+      .subscribe(data => {
+        this.currentPage = Number(data.id)
+        this.getList(this.currentPage, this.findOptions)
+      })
   }
 
+  // 2. 获取列表
+  getList(pageNo: number, obj?: any) {
+    this.deviceService.getVersionList(pageNo, obj)
+      .subscribe(data => {
+        if (data.success) {
+          let res = data.data.list
+          let arr = []
+          for (let i = 0; i < res.length; i++) {
+            let a = []
+            a.push({name: res[i].name, type: this.th[0].type})
+            a.push({name: res[i].mark, type: this.th[1].type})
+            a.push({name: moment(res[i].time).format("YYYY/MM/DD HH:mm:ss"), type: this.th[2].type})
+            arr.push({showData: a, rowData: res[i]})
+          }
+          this.dataList = arr
+          this.totalPages = data.data.totalPages==0?1:data.data.totalPages
+        }
+      })
+  }
 
-  // TODO:搜索 筛选列表
+  // 筛选列表
   search(keyWord: string) {
-    console.log(keyWord)
+    this.findOptions.name = keyWord
+    this.reLoad()
+    delete this.findOptions.name
   }
 
-  // TODO:分页查询
+  // 分页查询
   switchPage(pageNum) {
-    console.log(pageNum)
+    this.router.navigate([this.pageLink, pageNum])
   }
 
   // TODO:删除确认
@@ -125,6 +120,7 @@ export class VersionListComponent implements OnInit {
     }
   }
 
+  // 删除
   delete(){
     this.cancelDelete()
     this.sureOption.open = true
@@ -133,6 +129,7 @@ export class VersionListComponent implements OnInit {
     },2000)
   }
 
+  // 打开上传pump 弹窗
   upload(){
     this._uploadModal = this._modal.open({
       content:this.uploadModal,
@@ -143,9 +140,16 @@ export class VersionListComponent implements OnInit {
     })
   }
 
-
-
-
-
+  /*
+  * 辅助
+  * */
+  reLoad(){
+    if (this.currentPage !== 1) {
+      this.currentPage = 1
+      this.router.navigate([this.pageLink, this.currentPage])
+    } else {
+      this.getList(this.currentPage, this.findOptions)
+    }
+  }
 
 }
