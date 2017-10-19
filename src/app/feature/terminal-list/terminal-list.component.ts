@@ -190,10 +190,12 @@ export class TerminalListComponent implements OnInit {
     },2000)
   }
 
+  // 关闭模态窗
   cancelDelete(){
     this._editModal.destroy()
   }
 
+  // 编辑框打开
   edit(){
     this._editModal = this._modal.open({
       content:this.editModal,

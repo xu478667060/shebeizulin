@@ -18,17 +18,17 @@ const routes: Routes = [
     {path: 'device', loadChildren: 'app/feature/device-list/device-list.module#DeviceListModule'},
 
 
-    {path: 'gps', loadChildren: 'app/feature/gps-list/gps-list.module#GpsListModule'},
+    {path: 'gps/:id', loadChildren: 'app/feature/gps-list/gps-list.module#GpsListModule'},
     /**订单管理**/
     {path: 'monitoring', loadChildren: 'app/feature/monitoring/monitoring.module#MonitoringModule'},
     {path: 'trade', loadChildren: 'app/feature/trade/trade.module#TradeModule'},
     {path: 'lease', loadChildren: 'app/feature/lease/lease.module#LeaseModule'},
     {path: 'weibao', loadChildren: 'app/feature/maintain/maintain.module#MaintainModule'},
     /**成员管理**/
-    {path: 'merchant', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
+    {path: 'merchant/:id', loadChildren: 'app/feature/merchant/merchant.module#MerchantModule'},
       // 商家信息
 
-    {path: 'user', loadChildren: 'app/feature/user/user.module#UserModule'},
+    {path: 'user/:id', loadChildren: 'app/feature/user/user.module#UserModule'},
 
       {path: 'maintainer', loadChildren: 'app/feature/maintainer/maintainer.module#MaintainerModule'},
 
@@ -43,8 +43,6 @@ const routes: Routes = [
     {path: 'fapiao', loadChildren: 'app/feature/fapiao/fapiao.module#FapiaoModule'},
     {path: 'tuihuo', loadChildren: 'app/feature/tuihuo/tuihuo.module#TuihuoModule'},
     {path: 'expense', loadChildren: 'app/feature/expense/expense.module#ExpenseModule'},
-
-
   ]
   },
 

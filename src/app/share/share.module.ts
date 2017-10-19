@@ -13,6 +13,7 @@ import {StepsComponent} from "../component/steps/steps.component";
 
 import {ChartComponent} from "../component/chart/chart.component";
 import {SureModalComponent} from "../component/sure-modal/sure-modal.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -21,11 +22,13 @@ import {SureModalComponent} from "../component/sure-modal/sure-modal.component";
     HttpModule,
     CommonModule,
     RouterModule,
+    HttpClientModule,
     NgZorroAntdModule.forRoot()
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     HttpModule,
     CommonModule,
     DownSelectComponent,

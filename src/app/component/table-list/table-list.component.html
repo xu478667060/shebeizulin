@@ -8,23 +8,24 @@
         [class.big-large-more]="item.type==='big-large-more'"
     >{{item.name}}</li>
   </ul>
-  <ul class="tr-td" *ngFor="let dataItem of dataList">
-    <li class="td" *ngFor="let data of dataItem"
+  <ul class="tr-td" *ngFor="let dataItem of _dataList;let i=index;">
+    <li class="td" *ngFor="let data of dataItem.showData||dataItem;"
         [class.small]="data.type==='small'"
         [class.large]="data.type==='large'"
         [class.big-large]="data.type==='big-large'"
         [class.big-large-more]="data.type==='big-large-more'"
-        [class.big-height]="data.heightType==='big-height'"
+        [class.big-height]="dataItem.heightType==='big-height'||data.heightType==='big-height'"
     >
       <div class="flex html-c" [innerHtml]="data.name" *ngIf="!data.showSwitchButton"></div>
       <div class="flex html-c switchButton" *ngIf="data.showSwitchButton">
-        <nz-switch [ngModel]="true"></nz-switch>
-
+        <div (click)="_changeState(dataItem.rowData)">
+          <nz-switch [(ngModel)]="data.name"></nz-switch>
+        </div>
       </div>
     </li>
 
     <!--操作类型-->
-    <li class="td" *ngIf="hasOperation" [class.big-height]="dataItem[0].heightType==='big-height'">
+    <li class="td" *ngIf="hasOperation" [class.big-height]="dataItem.heightType==='big-height'||(dataItem[0]&&dataItem[0].heightType==='big-height')">
       <!--终端列表-->
       <div class="operation" *ngIf="operationType==='terminal'">
         <ul>
@@ -69,7 +70,7 @@
             operationType==='device'"
       >
           <!-- 查看详情-->
-          <button class="detail" (click)="_lookDetail()">查看详情</button>
+          <button class="detail" (click)="_lookDetail(dataItem.rowData)">查看详情</button>
       </div>
     </li>
   </ul>

@@ -22,7 +22,7 @@ export class DeviceListComponent implements OnInit {
     }
   ]
   th: Array<any> = [
-    {name: "设备图片", type: "large"},
+    {name: "设备图片", type: "small"},
     {name: "设备类型", type: "small"},
     {name: "设备编号", type: "large"},
     {name: "设备归属", type: "large"},
@@ -37,7 +37,7 @@ export class DeviceListComponent implements OnInit {
 
   dataList = [
     [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -45,8 +45,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -54,8 +54,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -63,8 +63,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -72,8 +72,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -81,8 +81,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -90,8 +90,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},
@@ -99,8 +99,8 @@ export class DeviceListComponent implements OnInit {
       {name: "启用", type: "small",heightType:"big-height"},
       {name: "在线", type: "small",heightType:"big-height"},
       {name: "100", type: "small",heightType:"big-height"},
-    ], [
-      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "large",heightType:"big-height"},
+    ],  [
+      {name: "<img class='big-img' src='../../../assets/image/example.png' alt='图片' />", type: "small",heightType:"big-height"},
       {name: "发电机", type: "small",heightType:"big-height"},
       {name: "454646545465645", type: "large",heightType:"big-height"},
       {name: "浙江杭州市西湖区华彩国际店", type: "large",heightType:"big-height"},

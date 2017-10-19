@@ -1,6 +1,6 @@
 <div class="switch-item">
   <ul>
-    <li class="item left-item active" [class.active]="_select==='left'" (click)="switchItem()">{{items[0]}}</li>
-    <li class="item right-item" [class.active]="_select==='right'" (click)="switchItem()">{{items[1]}}</li>
+    <li class="item left-item active" [class.active]="select==='left'" (click)="switchItem('left')">{{items[0]}}</li>
+    <li class="item right-item" [class.active]="select==='right'" (click)="switchItem('right')">{{items[1]}}</li>
   </ul>
 </div>

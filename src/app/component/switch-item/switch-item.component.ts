@@ -12,17 +12,19 @@ export class SwitchItemComponent implements OnInit {
 
   @Output() getItem = new EventEmitter<string>()
 
-  _select:string = "left"
-
+  @Input() select:string = "left"
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  switchItem(){
-    this._select==='left'?this._select='right':this._select="left"
-    this.getItem.emit(this._select)
+  switchItem(item){
+    if(this.select===item){
+      return
+    }
+    this.select==='left'?this.select='right':this.select="left"
+    this.getItem.emit(this.select)
   }
 
 }

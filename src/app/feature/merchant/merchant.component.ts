@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {UserManageService} from "../../service/user-manage.service";
 
 @Component({
   selector: 'app-merchant',
@@ -8,9 +9,11 @@ import {Router} from "@angular/router";
 })
 export class MerchantComponent implements OnInit {
 
+  pageLink = "/merchant"
+
   state = "left"
 
-  switchItems = ["申请列表","商家列表"]
+  switchItems = ["申请列表", "商家列表"]
 
   operationType = "merchant"
 
@@ -91,6 +94,8 @@ export class MerchantComponent implements OnInit {
       {name: "2017-10-11 10:45:25", type: "large"},
     ],
   ]
+  currentPage: number = 1
+  totalPages: number
 
   /*
   * 商家列表
@@ -114,96 +119,115 @@ export class MerchantComponent implements OnInit {
     {name: "操作", type: "flex"}
   ]
 
-  dataList1 = [
-    [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ], [
-      {name: "1231313132", type: "large"},
-      {name: "杭州西湖店", type: "large"},
-      {name: "赵武", type: "small"},
-      {name: "132454546446", type: "small"},
-      {name: "正常", type: "small"},
-      {name: "评分(待做)", type: "large"},
-    ],
-  ]
+  dataList1 = []
 
+  currentPage1: number = 1
+  totalPages1: number
 
+  // 查询配置
+  findOptions: any = {}
 
-  constructor(private router:Router) {
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private userService: UserManageService) {
   }
 
   ngOnInit() {
+    this.getQueryParam()
   }
 
 
+  /*
+  * 功能
+  * */
+  //1. 获取路由的查询参数
+  getQueryParam() {
+    this.route.params
+      .subscribe(data => {
+        this.route.queryParams
+          .subscribe(param=>{
+            this.state=param.loc||"left"
+            console.log(this.state)
+            if(this.state==="left"){
+
+            }else{
+              this.currentPage1 = Number(data.id)
+              this.getList1(this.currentPage1, this.findOptions)
+            }
+          })
+      })
+  }
+
+  //2. 获取商家列表
+  getList1(pageNo: number, obj?: any) {
+    if (this.state === "left") {
+
+    } else {
+      this.userService.getMerchantList(pageNo, obj)
+        .subscribe(data => {
+          if (data.success) {
+            let res = data.data.list
+            let arr = []
+            for (let i = 0; i < res.length; i++) {
+              let a = []
+              a.push({name: res[i].code, type: this.th1[0].type})
+              a.push({name: res[i].name, type: this.th1[1].type})
+              a.push({name: res[i].ownerName, type: this.th1[2].type})
+              a.push({name: res[i].phone, type: this.th1[3].type})
+              if (res[i].status === 1) {
+                a.push({name: "<span class='normal'>正常</span>", type: this.th1[4].type})
+              } else if (res[i].status === 2) {
+                a.push({name: "<span class='stop'>停用</span>", type: this.th1[4].type})
+              } else if (res[i].status === 3) {
+                a.push({name: "<span class='stop'>禁用</span>", type: this.th1[4].type})
+              }
+              // 构造五角星
+              let html = ""
+              let man = "<img class='star' src='../../../assets/image/man-star.png'/>"
+              let empty = "<img class='star' src='../../../assets/image/empty-star.png'/>"
+              for (let j = 0; j < res[i].lv; j++) {
+                html += man.toString()
+              }
+              for (let j = 0; j < 3 - res[i].lv; j++) {
+                html += empty.toString()
+              }
+              a.push({name: html, type: this.th1[5].type})
+
+              arr.push({showData: a, rowData: res[i]})
+            }
+            this.dataList1 = arr
+            this.totalPages1 = data.data.totalPages==0?1:data.data.totalPages
+          }
+        })
+    }
+
+  }
+
+  //3. 搜索
+  search(keyWord: string) {
+    this.findOptions.code = keyWord
+
+    // 当前页码为1 直接查询列表
+    // 否则返回第一页，会自动带上搜索字段
+    if(this.state==="left"){
+
+    }else{
+      if (this.currentPage1 !== 1) {
+        this.currentPage1 = 1
+        this.router.navigate([this.pageLink, this.currentPage1],{queryParams: {loc: this.state}})
+      } else {
+        this.getList1(this.currentPage1, this.findOptions)
+      }
+    }
+
+  }
+
+  //4. 分页
+  switchPage(pageNum) {
+    this.router.navigate([this.pageLink, pageNum],{queryParams: {loc: this.state}})
+  }
+
+  // 打开select框
   changeOpen(type, bool) {
     this.selectList1.forEach(item => {
       item.isSelect = false
@@ -217,28 +241,36 @@ export class MerchantComponent implements OnInit {
     console.log(type, item)
   }
 
-  // TODO:搜索 筛选列表
-  search(keyWord: string) {
-    console.log(keyWord)
-  }
-
-  // TODO:分页查询
-  switchPage(pageNum) {
-    console.log(pageNum)
+  //切换左右列表
+  switchItemsChange(item) {
+    this.resetData()
+    this.state = item
+    this.router.navigate(["merchant", 1], {queryParams: {loc: item}})
   }
 
   //跳转详情页
-  toDetail(){
-    if(this.state==='left'){
-      this.router.navigate(['merchant','apply-for-merchant',1])
-    }else{
-      this.router.navigate(["/merchant/business-information", 'mc'])
+  toDetail(obj) {
+    if (this.state === 'left') {
+      this.router.navigate(['merchant', obj.id, 'apply-for-merchant', 1])
+    } else {
+      this.router.navigate(["merchant", obj.id, "business-information", 'mc'])
     }
   }
 
-  //TODO:切换左右列表
-  switchItemsChange(item){
-    item==='left'?this.state=item:this.state=item
+  /*
+  * 辅助
+  * */
+
+  // 重置关键数据
+  resetData() {
+    this.currentPage = 1
+    this.currentPage1 = 1
   }
+
+  // 获取当前的页码
+  getCurrentPage() {
+    return this.state === "left" ? this.currentPage : this.currentPage1;
+  }
+
 
 }

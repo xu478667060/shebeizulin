@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,7 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls:["table-list.component.css"]
 })
 
-export class TableListComponent implements OnInit {
+export class TableListComponent implements OnInit,OnChanges {
 
   @Input() th:Array<any>
 
@@ -26,14 +26,21 @@ export class TableListComponent implements OnInit {
 
   @Output() edit = new EventEmitter()
 
+  @Output() changeState = new EventEmitter()
+
+  _dataList:Array<any> = []
   constructor() {
   }
 
   ngOnInit() {
+
+  }
+  ngOnChanges(changes:SimpleChanges){
+    this._dataList = this.dataList
   }
 
-  _lookDetail(){
-    this.lookDetail.emit()
+  _lookDetail(obj){
+    this.lookDetail.emit(obj)
   }
 
   _delete(){
@@ -45,5 +52,8 @@ export class TableListComponent implements OnInit {
   }
   _edit(){
     this.edit.emit()
+  }
+  _changeState(val){
+    this.changeState.emit(val)
   }
 }

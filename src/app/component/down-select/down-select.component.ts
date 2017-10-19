@@ -25,7 +25,7 @@ export class DownSelectComponent implements OnInit ,OnDestroy{
   // 向父组件弹出选中项
   @Output() selectItem = new EventEmitter<string>()
 
-  _selectItem:string
+  @Input() _selectItem:string
 
 
   constructor() {
@@ -53,7 +53,7 @@ export class DownSelectComponent implements OnInit ,OnDestroy{
   }
 
 
-  // 监听全局点击事件取消打开下拉
+  // 监听全局点击事件取消下拉
   listenGlobal(){
     document.addEventListener("click",(ev)=>{
       this.cancelOpen.emit(false)

@@ -14,8 +14,10 @@ export class DivPageComponent implements OnInit {
   // 总页数 默认99
   @Input() total: number = 99
 
-  // input框显示页码 默认为第1页
-  pageNum: number = 1
+  // 当前页 input框显示页码 默认为第1页
+  @Input() pageNum: number = 1
+
+
 
   constructor(private _message: NzMessageService) {
   }

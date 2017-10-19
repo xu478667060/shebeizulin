@@ -7,7 +7,7 @@
       <table-list [th]="th" [dataList]="dataList" [hasOperation]="hasOperation"></table-list>
     </div>
     <div class="footer-div-page">
-      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+      <div-page (getCurrentPage)="switchPage($event)" [pageNum]="currentPage" [total]="totalPages"></div-page>
     </div>
   </div>
 </div>

@@ -80,6 +80,19 @@ img {
 
 }
 
+.tr-td .td .html-c .normal{
+  color:#00b64f;
+}
+
+.tr-td .td .html-c .stop{
+  color:#ccc;
+}
+
+.tr-td .td .html-c .star{
+  width: 17px;
+  height: 17px;
+  margin-right: 2px;
+}
 
 .tr-td .td .html-c .img {
   width: 48px;

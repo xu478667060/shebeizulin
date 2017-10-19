@@ -1,6 +1,6 @@
 <!-- <button [routerLink] = "['/merchant/business-information']">tiao</button> -->
 <div class="switch-list">
-  <switch-item [items]="switchItems" (getItem)="switchItemsChange($event)"></switch-item>
+  <switch-item [items]="switchItems" (getItem)="switchItemsChange($event)" [select]="state"></switch-item>
 </div>
 <div class="page-list" [hidden]="state!=='left'">
   <div class="content-wrap">
@@ -24,10 +24,10 @@
       <search-box [placeholder]="searchTip1" (searchWord)="search($event)"></search-box>
     </div>
     <div class="table-list">
-      <table-list [th]="th1" [dataList]="dataList1" [operationType]="operationType" (lookDetail)="toDetail()"></table-list>
+      <table-list [th]="th1" [dataList]="dataList1" [operationType]="operationType" (lookDetail)="toDetail($event)"></table-list>
     </div>
     <div class="footer-div-page">
-      <div-page (getCurrentPage)="switchPage($event)"></div-page>
+      <div-page (getCurrentPage)="switchPage($event)" [total]="totalPages1" [pageNum]="currentPage1"></div-page>
     </div>
   </div>
 </div>

@@ -97,7 +97,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
         childList: [
           {name: '终端列表', isSelect: this.checkUrl("/terminal"), link: '/terminal', index: 0},
           {name: '版本列表', isSelect: this.checkUrl("/version"), link: '/version', index: 0},
-          {name: 'GPS列表', isSelect: this.checkUrl("/gps"), link: '/gps', index: 0},
+          {name: 'GPS列表', isSelect: this.checkUrl("/gps"), link: '/gps/1', index: 0},
           {name: '设备列表', isSelect: this.checkUrl("/device"), link: '/device', index: 0},
         ]
       },
@@ -117,8 +117,8 @@ export class IndexComponent implements OnInit, AfterViewInit {
         img_URL: '../../../assets/image/user-change.png',
         state: 'in',
         childList: [
-          {name: '商家管理', isSelect: this.checkUrl("/merchant"), link: '/merchant', index: 2},
-          {name: '用户管理', isSelect: this.checkUrl("/user"), link: '/user', index: 2},
+          {name: '商家管理', isSelect: this.checkUrl("/merchant"), link: '/merchant/1', index: 2},
+          {name: '用户管理', isSelect: this.checkUrl("/user"), link: '/user/1', index: 2},
           {name: '维修员管理', isSelect: this.checkUrl("/maintainer"), link: '/maintainer', index: 2},
 
         ]
